@@ -28,41 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            this.cuiLabel2 = new CuoreUI.Controls.cuiLabel();
+            this.components = new System.ComponentModel.Container();
             this.txtUser = new CuoreUI.Controls.cuiTextBox();
             this.txtPassword = new CuoreUI.Controls.cuiTextBox();
-            this.cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             this.txtRegistrarUser = new CuoreUI.Controls.cuiButton();
             this.txtIniciar = new CuoreUI.Controls.cuiButton();
-            this.linkRecuperarContra = new System.Windows.Forms.LinkLabel();
+            this.cuiPanelGradient1 = new CuoreUI.Controls.cuiPanelGradient();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLinkLabel1 = new Krypton.Toolkit.KryptonLinkLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cuiPanelGradient1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cuiLabel1
-            // 
-            this.cuiLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.cuiLabel1.Content = "Inicio\\ Seccion";
-            this.cuiLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cuiLabel1.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel1.Location = new System.Drawing.Point(191, 14);
-            this.cuiLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cuiLabel1.Name = "cuiLabel1";
-            this.cuiLabel1.Size = new System.Drawing.Size(335, 46);
-            this.cuiLabel1.TabIndex = 0;
-            this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // cuiLabel2
-            // 
-            this.cuiLabel2.Content = "Usuario";
-            this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiLabel2.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel2.Location = new System.Drawing.Point(169, 96);
-            this.cuiLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(106, 32);
-            this.cuiLabel2.TabIndex = 1;
-            this.cuiLabel2.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtUser
             // 
@@ -77,7 +56,7 @@
             this.txtUser.Image = null;
             this.txtUser.ImageExpand = new System.Drawing.Point(0, 0);
             this.txtUser.ImageOffset = new System.Drawing.Point(0, 0);
-            this.txtUser.Location = new System.Drawing.Point(283, 83);
+            this.txtUser.Location = new System.Drawing.Point(355, 92);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Multiline = false;
             this.txtUser.Name = "txtUser";
@@ -106,7 +85,7 @@
             this.txtPassword.Image = null;
             this.txtPassword.ImageExpand = new System.Drawing.Point(0, 0);
             this.txtPassword.ImageOffset = new System.Drawing.Point(0, 0);
-            this.txtPassword.Location = new System.Drawing.Point(283, 137);
+            this.txtPassword.Location = new System.Drawing.Point(355, 146);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
@@ -121,21 +100,6 @@
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextOffset = new System.Drawing.Size(0, 0);
             this.txtPassword.UnderlinedStyle = true;
-            // 
-            // cuiLabel3
-            // 
-            this.cuiLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.cuiLabel3.CausesValidation = false;
-            this.cuiLabel3.Content = "Contraseña";
-            this.cuiLabel3.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiLabel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cuiLabel3.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel3.Location = new System.Drawing.Point(144, 150);
-            this.cuiLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cuiLabel3.Name = "cuiLabel3";
-            this.cuiLabel3.Size = new System.Drawing.Size(131, 32);
-            this.cuiLabel3.TabIndex = 3;
-            this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtRegistrarUser
             // 
@@ -156,7 +120,7 @@
             this.txtRegistrarUser.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtRegistrarUser.Image = null;
             this.txtRegistrarUser.ImageExpand = new System.Drawing.Point(0, 0);
-            this.txtRegistrarUser.Location = new System.Drawing.Point(552, 14);
+            this.txtRegistrarUser.Location = new System.Drawing.Point(635, 55);
             this.txtRegistrarUser.Name = "txtRegistrarUser";
             this.txtRegistrarUser.NormalBackground = System.Drawing.Color.White;
             this.txtRegistrarUser.NormalForeColor = System.Drawing.Color.Black;
@@ -178,32 +142,33 @@
             // 
             // txtIniciar
             // 
+            this.txtIniciar.BackColor = System.Drawing.Color.Transparent;
             this.txtIniciar.CheckButton = false;
             this.txtIniciar.Checked = false;
             this.txtIniciar.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.txtIniciar.CheckedForeColor = System.Drawing.Color.White;
-            this.txtIniciar.CheckedImageTint = System.Drawing.Color.White;
+            this.txtIniciar.CheckedForeColor = System.Drawing.Color.Transparent;
+            this.txtIniciar.CheckedImageTint = System.Drawing.Color.Transparent;
             this.txtIniciar.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
             this.txtIniciar.Content = "Iniciar Seccion";
             this.txtIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtIniciar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.txtIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtIniciar.ForeColor = System.Drawing.Color.Black;
-            this.txtIniciar.HoverBackground = System.Drawing.Color.White;
+            this.txtIniciar.HoverBackground = System.Drawing.Color.Transparent;
             this.txtIniciar.HoverForeColor = System.Drawing.Color.DimGray;
             this.txtIniciar.HoverImageTint = System.Drawing.Color.DimGray;
             this.txtIniciar.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.Image = null;
             this.txtIniciar.ImageExpand = new System.Drawing.Point(0, 0);
-            this.txtIniciar.Location = new System.Drawing.Point(396, 189);
+            this.txtIniciar.Location = new System.Drawing.Point(468, 198);
             this.txtIniciar.Name = "txtIniciar";
-            this.txtIniciar.NormalBackground = System.Drawing.Color.White;
+            this.txtIniciar.NormalBackground = System.Drawing.Color.Transparent;
             this.txtIniciar.NormalForeColor = System.Drawing.Color.Black;
             this.txtIniciar.NormalImageTint = System.Drawing.Color.Black;
             this.txtIniciar.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.OutlineThickness = 1F;
             this.txtIniciar.Padding = new System.Windows.Forms.Padding(12);
-            this.txtIniciar.PressedBackground = System.Drawing.Color.WhiteSmoke;
+            this.txtIniciar.PressedBackground = System.Drawing.Color.Transparent;
             this.txtIniciar.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtIniciar.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtIniciar.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -213,47 +178,99 @@
             this.txtIniciar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.txtIniciar.TextPadding = 12;
             this.txtIniciar.TextSpacing = 2;
+            this.txtIniciar.Click += new System.EventHandler(this.txtIniciar_Click);
             // 
-            // linkRecuperarContra
+            // cuiPanelGradient1
             // 
-            this.linkRecuperarContra.Location = new System.Drawing.Point(212, 201);
-            this.linkRecuperarContra.Name = "linkRecuperarContra";
-            this.linkRecuperarContra.Size = new System.Drawing.Size(178, 33);
-            this.linkRecuperarContra.TabIndex = 7;
-            this.linkRecuperarContra.TabStop = true;
-            this.linkRecuperarContra.Text = "Olvide mi contraseña";
-            this.linkRecuperarContra.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.cuiPanelGradient1.BackColor = System.Drawing.Color.Transparent;
+            this.cuiPanelGradient1.Controls.Add(this.kryptonLabel3);
+            this.cuiPanelGradient1.Controls.Add(this.txtRegistrarUser);
+            this.cuiPanelGradient1.Controls.Add(this.kryptonLabel2);
+            this.cuiPanelGradient1.Controls.Add(this.kryptonLinkLabel1);
+            this.cuiPanelGradient1.Controls.Add(this.kryptonLabel1);
+            this.cuiPanelGradient1.GradientAngle = 0F;
+            this.cuiPanelGradient1.Location = new System.Drawing.Point(0, -32);
+            this.cuiPanelGradient1.Name = "cuiPanelGradient1";
+            this.cuiPanelGradient1.OutlineThickness = 1F;
+            this.cuiPanelGradient1.PanelColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cuiPanelGradient1.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cuiPanelGradient1.PanelOutlineColor1 = System.Drawing.Color.Magenta;
+            this.cuiPanelGradient1.PanelOutlineColor2 = System.Drawing.Color.Lime;
+            this.cuiPanelGradient1.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiPanelGradient1.Size = new System.Drawing.Size(799, 488);
+            this.cuiPanelGradient1.TabIndex = 9;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(218, 193);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(130, 30);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Contraseña";
+            // 
+            // kryptonLinkLabel1
+            // 
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(263, 246);
+            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
+            this.kryptonLinkLabel1.Size = new System.Drawing.Size(190, 29);
+            this.kryptonLinkLabel1.TabIndex = 4;
+            this.kryptonLinkLabel1.Values.Text = "Olvide mi  contraseña";
+            this.kryptonLinkLabel1.LinkClicked += new System.EventHandler(this.kryptonLinkLabel1_LinkClicked);
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(218, 139);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(130, 30);
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.TabIndex = 6;
+            this.kryptonLabel2.Values.Text = "Usuario";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel3.Location = new System.Drawing.Point(355, 58);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(258, 42);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 7;
+            this.kryptonLabel3.Values.Text = "Inicio de Seccion";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.linkRecuperarContra);
             this.Controls.Add(this.txtIniciar);
-            this.Controls.Add(this.txtRegistrarUser);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.cuiLabel3);
             this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.cuiLabel2);
-            this.Controls.Add(this.cuiLabel1);
+            this.Controls.Add(this.cuiPanelGradient1);
             this.Name = "LoginUser";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginUser_Load);
+            this.cuiPanelGradient1.ResumeLayout(false);
+            this.cuiPanelGradient1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiTextBox txtUser;
         private CuoreUI.Controls.cuiTextBox txtPassword;
-        private CuoreUI.Controls.cuiLabel cuiLabel3;
         private CuoreUI.Controls.cuiButton txtRegistrarUser;
         private CuoreUI.Controls.cuiButton txtIniciar;
-        private System.Windows.Forms.LinkLabel linkRecuperarContra;
+        private CuoreUI.Controls.cuiPanelGradient cuiPanelGradient1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
