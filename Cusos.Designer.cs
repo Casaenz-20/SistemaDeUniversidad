@@ -33,6 +33,7 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PersonasMatri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,12 +46,13 @@
             this.Nombre,
             this.Precio,
             this.PersonasMatri});
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(3, 364);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(3, 291);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersVisible = false;
             this.kryptonDataGridView1.RowHeadersWidth = 62;
             this.kryptonDataGridView1.RowTemplate.Height = 28;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1319, 475);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1172, 380);
             this.kryptonDataGridView1.TabIndex = 0;
             // 
             // Codigo
@@ -81,13 +83,27 @@
             this.PersonasMatri.MinimumWidth = 8;
             this.PersonasMatri.Name = "PersonasMatri";
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.AutoSize = false;
+            this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel1.Location = new System.Drawing.Point(504, 4);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(210, 35);
+            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 1;
+            this.kryptonLabel1.Values.Text = "Registar Cursos";
+            // 
             // Cusos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.kryptonDataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cusos";
-            this.Size = new System.Drawing.Size(1325, 842);
+            this.Size = new System.Drawing.Size(1178, 674);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,5 +116,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn PersonasMatri;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
