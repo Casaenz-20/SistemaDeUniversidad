@@ -31,5 +31,14 @@ namespace SistemaDeUniversidad.Properties {
                 return ((string)(this["ListUser"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ListCursos.json")]
+        public string ListCursos {
+            get {
+                return ((string)(this["ListCursos"]));
+            }
+        }
     }
 }

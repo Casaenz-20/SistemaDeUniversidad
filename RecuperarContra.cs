@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace SistemaDeUniversidad
 {
@@ -17,6 +19,11 @@ namespace SistemaDeUniversidad
         public RecuperarContra()
         {
             InitializeComponent();
+        }
+
+        private void btnRecuperar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

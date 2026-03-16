@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,11 +89,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cusos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cusos.Designer.cs">
+      <DependentUpon>Cusos.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginUser.Designer.cs">
       <DependentUpon>LoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDeAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelDeAdministrador.Designer.cs">
+      <DependentUpon>PanelDeAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelEstudiantes.Designer.cs">
+      <DependentUpon>PanelEstudiantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,8 +127,17 @@
     <Compile Include="RegistrarUsuarios.Designer.cs">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cusos.resx">
+      <DependentUpon>Cusos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginUser.resx">
       <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDeAdministrador.resx">
+      <DependentUpon>PanelDeAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelEstudiantes.resx">
+      <DependentUpon>PanelEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +149,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RecuperarContra.resx">
+      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarUsuarios.resx">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +171,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3448591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8275340.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-de-candado-de-bloqueo-para-interfaz-de-seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-cerrado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

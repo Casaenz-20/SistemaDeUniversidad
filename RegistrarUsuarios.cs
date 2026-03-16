@@ -46,8 +46,8 @@ namespace SistemaDeUniversidad
                         ["Contraseña"] = txtPasswordNew.Text,
                         ["FechaNacimiento"] = StudentDate.Value.ToString("yyyy-MM-dd"),
                         ["Correo"] = txtCorreo.Text,
-                        ["TipoUsuario"] = "Estudiante"
-
+                        ["TipoUsuario"] = "Estudiante",
+                        ["Activo"] = true
                     };
                     usuarios.Add(nuevoUsuario);
                     File.WriteAllText(Settings.Default.ListUser,JsonConvert.SerializeObject(usuarios, Formatting.Indented));
