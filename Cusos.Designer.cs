@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
+            this.datagCursos = new Krypton.Toolkit.KryptonDataGridView();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCodigoCurso = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,35 +39,33 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cboResinto = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnGuardarCurso = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Resinto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonasMatri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGuardarCurso = new Guna.UI2.WinForms.Guna2Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // kryptonDataGridView1
+            // datagCursos
             // 
-            this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datagCursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datagCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
             this.Precio,
-            this.Resinto,
-            this.PersonasMatri});
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(3, 291);
-            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.RowHeadersVisible = false;
-            this.kryptonDataGridView1.RowHeadersWidth = 62;
-            this.kryptonDataGridView1.RowTemplate.Height = 28;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1172, 380);
-            this.kryptonDataGridView1.TabIndex = 0;
+            this.Resinto});
+            this.datagCursos.Location = new System.Drawing.Point(3, 291);
+            this.datagCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datagCursos.Name = "datagCursos";
+            this.datagCursos.RowHeadersVisible = false;
+            this.datagCursos.RowHeadersWidth = 62;
+            this.datagCursos.RowTemplate.Height = 28;
+            this.datagCursos.Size = new System.Drawing.Size(1172, 380);
+            this.datagCursos.TabIndex = 0;
             // 
             // kryptonLabel1
             // 
@@ -205,6 +203,25 @@
             this.cboResinto.Size = new System.Drawing.Size(244, 36);
             this.cboResinto.TabIndex = 9;
             // 
+            // btnGuardarCurso
+            // 
+            this.btnGuardarCurso.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuardarCurso.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuardarCurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGuardarCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGuardarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGuardarCurso.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCurso.Location = new System.Drawing.Point(444, 202);
+            this.btnGuardarCurso.Name = "btnGuardarCurso";
+            this.btnGuardarCurso.Size = new System.Drawing.Size(180, 45);
+            this.btnGuardarCurso.TabIndex = 10;
+            this.btnGuardarCurso.Text = "Guardar Curso";
+            this.btnGuardarCurso.Click += new System.EventHandler(this.btnGuardarCurso_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Codigo
             // 
             this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -233,32 +250,6 @@
             this.Resinto.MinimumWidth = 6;
             this.Resinto.Name = "Resinto";
             // 
-            // PersonasMatri
-            // 
-            this.PersonasMatri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PersonasMatri.HeaderText = "Personas Matriculadas";
-            this.PersonasMatri.MinimumWidth = 8;
-            this.PersonasMatri.Name = "PersonasMatri";
-            // 
-            // btnGuardarCurso
-            // 
-            this.btnGuardarCurso.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuardarCurso.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuardarCurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGuardarCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGuardarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGuardarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCurso.Location = new System.Drawing.Point(444, 202);
-            this.btnGuardarCurso.Name = "btnGuardarCurso";
-            this.btnGuardarCurso.Size = new System.Drawing.Size(180, 45);
-            this.btnGuardarCurso.TabIndex = 10;
-            this.btnGuardarCurso.Text = "Guardar Curso";
-            this.btnGuardarCurso.Click += new System.EventHandler(this.btnGuardarCurso_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // Cusos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,12 +264,12 @@
             this.Controls.Add(this.txtCodigoCurso);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.kryptonLabel1);
-            this.Controls.Add(this.kryptonDataGridView1);
+            this.Controls.Add(this.datagCursos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cusos";
             this.Size = new System.Drawing.Size(1178, 674);
             this.Load += new System.EventHandler(this.Cusos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -286,7 +277,7 @@
 
         #endregion
 
-        private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private Krypton.Toolkit.KryptonDataGridView datagCursos;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoCurso;
@@ -296,12 +287,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2ComboBox cboResinto;
+        private Guna.UI2.WinForms.Guna2Button btnGuardarCurso;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Resinto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonasMatri;
-        private Guna.UI2.WinForms.Guna2Button btnGuardarCurso;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

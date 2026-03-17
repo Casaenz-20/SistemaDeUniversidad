@@ -31,11 +31,13 @@
             this.cuiPanelGradient1 = new CuoreUI.Controls.cuiPanelGradient();
             this.RegisCursos = new System.Windows.Forms.Label();
             this.Contenedor = new CuoreUI.Controls.cuiPanel();
+            this.lblUsuarios = new System.Windows.Forms.Label();
             this.cuiPanelGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cuiPanelGradient1
             // 
+            this.cuiPanelGradient1.Controls.Add(this.lblUsuarios);
             this.cuiPanelGradient1.Controls.Add(this.RegisCursos);
             this.cuiPanelGradient1.GradientAngle = 0F;
             this.cuiPanelGradient1.Location = new System.Drawing.Point(-1, -6);
@@ -74,6 +76,18 @@
             this.Contenedor.Size = new System.Drawing.Size(1152, 590);
             this.Contenedor.TabIndex = 3;
             // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.AutoSize = true;
+            this.lblUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Location = new System.Drawing.Point(1, 106);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(192, 25);
+            this.lblUsuarios.TabIndex = 1;
+            this.lblUsuarios.Text = "Administrar Usuarios";
+            this.lblUsuarios.Click += new System.EventHandler(this.lblUsuarios_Click);
+            // 
             // PanelDeAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -95,5 +109,6 @@
         private CuoreUI.Controls.cuiPanelGradient cuiPanelGradient1;
         private CuoreUI.Controls.cuiPanel Contenedor;
         private System.Windows.Forms.Label RegisCursos;
+        private System.Windows.Forms.Label lblUsuarios;
     }
 }

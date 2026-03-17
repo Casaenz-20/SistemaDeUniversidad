@@ -28,5 +28,17 @@ namespace SistemaDeUniversidad
 
             registroCursos.Show();
         }
+
+        private void lblUsuarios_Click(object sender, EventArgs e)
+        {
+            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
+            Contenedor.Controls.Clear();
+            administrarUsuarios.TopLevel = false;
+            administrarUsuarios.FormBorderStyle = FormBorderStyle.None;
+            administrarUsuarios.Dock = DockStyle.Fill;
+            Contenedor.Controls.Add(administrarUsuarios);
+
+            administrarUsuarios.Show();
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace SistemaDeUniversidad
 {
     public partial class Cusos : UserControl
     {
-
+       
         public static List<JObject> cursos = new List<JObject>();
 
         public Cusos()
@@ -34,6 +35,12 @@ namespace SistemaDeUniversidad
                 CrearArchivo(Settings.Default.ListCursos);
             }
             cursos = LeerCursos(Settings.Default.ListCursos);
+
+            datagCursos.Rows.Clear();
+            foreach (var curso in cursos)
+            {
+                datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
+            }
         }
 
         private List<JObject> LeerCursos(string listCursos)
@@ -64,7 +71,31 @@ namespace SistemaDeUniversidad
                 {
                     MessageBox.Show("El código del curso ya existe. Por favor, ingrese un código único.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    
+                    JObject nuevoCurso = new JObject
+                    {
+                        ["Nombre"] = txtNombreCurso.Text,
+                        ["Codigo"] = txtCodigoCurso.Text,
+                        ["Precio"] = txtPrecio.Text,
+                        ["Recinto"] = cboResinto.SelectedItem.ToString()
+
+                    };
+                    cursos.Add(nuevoCurso);
+                    File.WriteAllText(Settings.Default.ListCursos, JsonConvert.SerializeObject(cursos, Formatting.Indented));
+                    MessageBox.Show("Curso guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    datagCursos.Rows.Add(nuevoCurso["Codigo"], nuevoCurso["Nombre"], nuevoCurso["Precio"], nuevoCurso["Recinto"]);
+                    LimpiarCampos();
+                }
             }
+        }
+
+        private void LimpiarCampos()
+        {
+           txtCodigoCurso.Clear();
+           txtPrecio.Clear();
+            txtNombreCurso.Clear();
         }
 
         private bool CursoExite(string text)
