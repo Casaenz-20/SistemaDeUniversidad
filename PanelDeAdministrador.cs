@@ -17,8 +17,11 @@ namespace SistemaDeUniversidad
             InitializeComponent();
         }
 
-        private void RegisCursos_Click(object sender, EventArgs e)
+        
+
+        private void RegisCursos_Click_1(object sender, EventArgs e)
         {
+
             Cusos registroCursos = new Cusos();
             Contenedor.Controls.Clear();
             registroCursos.TopLevel = false;
@@ -29,8 +32,9 @@ namespace SistemaDeUniversidad
             registroCursos.Show();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnUsuariosPanel_Click(object sender, EventArgs e)
         {
+
             AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
             Contenedor.Controls.Clear();
             administrarUsuarios.TopLevel = false;

@@ -71,7 +71,7 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
             this.kryptonPanel1.Location = new System.Drawing.Point(62, 31);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.HeaderCustom2;
+            this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom3;
             this.kryptonPanel1.Size = new System.Drawing.Size(524, 445);
             this.kryptonPanel1.TabIndex = 5;
             // 
