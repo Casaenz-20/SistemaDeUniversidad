@@ -23,13 +23,6 @@ namespace SistemaDeUniversidad
             InitializeComponent();
         }
 
-        private void txtRegistrarUser_Click(object sender, EventArgs e)
-        {
-            RegistrarUsuarios registrarUsuarios = new RegistrarUsuarios();
-            registrarUsuarios.Show();
-            this.Hide();
-        }
-
         private void LoginUser_Load(object sender, EventArgs e)
         {
             if (!ArchivoUsuarioExiste(Settings.Default.ListUser))
@@ -161,8 +154,11 @@ namespace SistemaDeUniversidad
             }
         }
 
-       
-
-        
+        private void btnRegistrarUser_Click(object sender, EventArgs e)
+        {
+            RegistrarUsuarios registrarUsuarios = new RegistrarUsuarios();
+            registrarUsuarios.Show();
+            this.Hide();
+        }
     }
 }
