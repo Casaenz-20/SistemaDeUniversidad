@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace SistemaDeUniversidad
 {
@@ -38,16 +39,16 @@ namespace SistemaDeUniversidad
 
         private List<JObject> LeerUsuarios(string listUser)
         {
-            string contenido_usuario_tex = File.ReadAllText(listUser);
+            string contenido_usuario_tex = System.IO.File.ReadAllText(listUser);
             return JsonConvert.DeserializeObject<List<JObject>>(contenido_usuario_tex) ?? new List<JObject>();
         }
 
         private void CrearArchivo(string listUser)
         {
-            File.WriteAllText(listUser, "[]");
+            System.IO.File.WriteAllText(listUser, "[]");
         }
 
-        private Func<string, bool> ArchivoExiste = (ruta) => File.Exists(ruta);
+        private Func<string, bool> ArchivoExiste = (ruta) => System.IO.File.Exists(ruta);
 
         private void txtCedula_TextChanged(object sender, EventArgs e)
         {
@@ -56,8 +57,49 @@ namespace SistemaDeUniversidad
             datagridUsuarios.Rows.Clear();
             foreach (var usuario in usuariosFiltrados)
             {
-                datagridUsuarios.Rows.Add(usuario["ID"], usuario["Usuario"], usuario["FechaNacimiento"], usuario["Correo"], usuario["TipoUsuario"]);
+                datagridUsuarios.Rows.Add(usuario["ID"], usuario["Usuario"], usuario["Correo"], usuario["FechaNacimiento"], usuario["TipoUsuario"]);
             }
+        }
+
+        private void datagridUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = datagridUsuarios.Rows[e.RowIndex];
+
+                string usuario = datagridUsuarios.SelectedRows[0].Cells[1].Value.ToString();
+                txtUsuario.Text = usuario;
+
+                string correo = datagridUsuarios.SelectedRows[0].Cells[3].Value.ToString();
+                txtCorreo.Text = correo;
+
+                string cedula = datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString();
+                txtCedula.Text = cedula;
+
+                string rol = datagridUsuarios.SelectedRows[0].Cells[4].Value.ToString();
+                cboxRol.Text = rol;
+
+                if (fila.Cells[2].Value != null)
+                {
+                    datePersona.Value = Convert.ToDateTime(fila.Cells[2].Value);
+                }
+
+                if (EstaActivo())
+                {
+                    chkEstado.Checked = true;
+                }
+                else
+                {
+                    chkEstado.Checked = false;
+                }
+            }
+            
+        }
+
+        private bool EstaActivo()
+        {
+            bool CuentaActiva = usuarios.Any(u => u["Usuario"].ToString() == txtUsuario.Text && u["Activo"].ToObject<bool>() == true);
+            return CuentaActiva;
         }
     }
 }

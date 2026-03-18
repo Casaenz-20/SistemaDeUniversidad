@@ -46,7 +46,7 @@
             // kryptonRichTextBox1
             // 
             this.kryptonRichTextBox1.InputControlStyle = Krypton.Toolkit.InputControlStyle.PanelAlternate;
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(1, 60);
+            this.kryptonRichTextBox1.Location = new System.Drawing.Point(2, 60);
             this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
             this.kryptonRichTextBox1.ReadOnly = true;
             this.kryptonRichTextBox1.Size = new System.Drawing.Size(941, 79);

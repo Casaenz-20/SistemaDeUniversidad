@@ -34,6 +34,8 @@
             this.StudentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtID = new CuoreUI.Controls.cuiTextBox();
             this.cuiPanelGradient1 = new CuoreUI.Controls.cuiPanelGradient();
+            this.txtCorreo = new CuoreUI.Controls.cuiTextBox();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
             this.btnRegistar = new Krypton.Toolkit.KryptonButton();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
@@ -41,8 +43,6 @@
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
-            this.txtCorreo = new CuoreUI.Controls.cuiTextBox();
             this.cuiPanelGradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +149,9 @@
             // 
             // cuiPanelGradient1
             // 
+            this.cuiPanelGradient1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cuiPanelGradient1.Controls.Add(this.txtCorreo);
             this.cuiPanelGradient1.Controls.Add(this.kryptonLabel6);
             this.cuiPanelGradient1.Controls.Add(this.btnRegistar);
@@ -169,6 +172,47 @@
             this.cuiPanelGradient1.Rounding = new System.Windows.Forms.Padding(8);
             this.cuiPanelGradient1.Size = new System.Drawing.Size(816, 449);
             this.cuiPanelGradient1.TabIndex = 11;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackgroundColor = System.Drawing.Color.White;
+            this.txtCorreo.Content = "";
+            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCorreo.FocusBackgroundColor = System.Drawing.Color.White;
+            this.txtCorreo.FocusImageTint = System.Drawing.Color.White;
+            this.txtCorreo.FocusOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
+            this.txtCorreo.Image = null;
+            this.txtCorreo.ImageExpand = new System.Drawing.Point(0, 0);
+            this.txtCorreo.ImageOffset = new System.Drawing.Point(0, 0);
+            this.txtCorreo.Location = new System.Drawing.Point(307, 216);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Multiline = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.NormalImageTint = System.Drawing.Color.White;
+            this.txtCorreo.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(23, 2, 23, 0);
+            this.txtCorreo.PasswordChar = false;
+            this.txtCorreo.PlaceholderColor = System.Drawing.Color.LightGray;
+            this.txtCorreo.PlaceholderText = "Placeholder text..";
+            this.txtCorreo.Rounding = new System.Windows.Forms.Padding(8);
+            this.txtCorreo.Size = new System.Drawing.Size(266, 27);
+            this.txtCorreo.TabIndex = 9;
+            this.txtCorreo.TextOffset = new System.Drawing.Size(0, 0);
+            this.txtCorreo.UnderlinedStyle = true;
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.AutoSize = false;
+            this.kryptonLabel6.LabelStyle = Krypton.Toolkit.LabelStyle.AlternatePanel;
+            this.kryptonLabel6.Location = new System.Drawing.Point(87, 216);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(190, 27);
+            this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.TabIndex = 6;
+            this.kryptonLabel6.Values.Text = "Correo Eletronico";
             // 
             // btnRegistar
             // 
@@ -243,47 +287,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // kryptonLabel6
-            // 
-            this.kryptonLabel6.AutoSize = false;
-            this.kryptonLabel6.LabelStyle = Krypton.Toolkit.LabelStyle.AlternatePanel;
-            this.kryptonLabel6.Location = new System.Drawing.Point(87, 216);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(190, 27);
-            this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.TabIndex = 6;
-            this.kryptonLabel6.Values.Text = "Correo Eletronico";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackgroundColor = System.Drawing.Color.White;
-            this.txtCorreo.Content = "";
-            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCorreo.FocusBackgroundColor = System.Drawing.Color.White;
-            this.txtCorreo.FocusImageTint = System.Drawing.Color.White;
-            this.txtCorreo.FocusOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
-            this.txtCorreo.Image = null;
-            this.txtCorreo.ImageExpand = new System.Drawing.Point(0, 0);
-            this.txtCorreo.ImageOffset = new System.Drawing.Point(0, 0);
-            this.txtCorreo.Location = new System.Drawing.Point(307, 216);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.Multiline = false;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.NormalImageTint = System.Drawing.Color.White;
-            this.txtCorreo.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(23, 2, 23, 0);
-            this.txtCorreo.PasswordChar = false;
-            this.txtCorreo.PlaceholderColor = System.Drawing.Color.LightGray;
-            this.txtCorreo.PlaceholderText = "Placeholder text..";
-            this.txtCorreo.Rounding = new System.Windows.Forms.Padding(8);
-            this.txtCorreo.Size = new System.Drawing.Size(266, 27);
-            this.txtCorreo.TabIndex = 9;
-            this.txtCorreo.TextOffset = new System.Drawing.Size(0, 0);
-            this.txtCorreo.UnderlinedStyle = true;
             // 
             // RegistrarUsuarios
             // 
