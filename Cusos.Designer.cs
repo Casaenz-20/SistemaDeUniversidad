@@ -143,6 +143,7 @@
             this.txtCodigoCurso.SelectedText = "";
             this.txtCodigoCurso.Size = new System.Drawing.Size(258, 29);
             this.txtCodigoCurso.TabIndex = 3;
+            this.txtCodigoCurso.TextChanged += new System.EventHandler(this.txtCodigoCurso_TextChanged);
             // 
             // txtNombreCurso
             // 

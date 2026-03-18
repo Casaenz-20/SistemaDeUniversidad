@@ -48,5 +48,16 @@ namespace SistemaDeUniversidad
         }
 
         private Func<string, bool> ArchivoExiste = (ruta) => File.Exists(ruta);
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+            var filtro = txtCedula.Text.Trim();
+            var usuariosFiltrados = usuarios.Where(u => u["ID"].ToString().Contains(filtro)).ToList();
+            datagridUsuarios.Rows.Clear();
+            foreach (var usuario in usuariosFiltrados)
+            {
+                datagridUsuarios.Rows.Add(usuario["ID"], usuario["Usuario"], usuario["FechaNacimiento"], usuario["Correo"], usuario["TipoUsuario"]);
+            }
+        }
     }
 }

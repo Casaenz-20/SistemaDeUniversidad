@@ -35,6 +35,7 @@
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.txtCedula = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +108,20 @@
             this.kryptonLabel1.TabIndex = 1;
             this.kryptonLabel1.Values.Text = "Base De Datos - Usuarios";
             // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(123, 117);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(177, 31);
+            this.txtCedula.TabIndex = 2;
+            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
+            // 
             // AdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.datagridUsuarios);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -120,6 +130,7 @@
             this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridUsuarios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +143,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoUsuario;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox txtCedula;
     }
 }

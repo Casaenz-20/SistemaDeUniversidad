@@ -103,5 +103,16 @@ namespace SistemaDeUniversidad
             bool YaExisteCurso =  cursos.Any(curso => curso["Codigo"]?.ToString() == txtCodigoCurso.Text);
             return  YaExisteCurso;
         }
+
+        private void txtCodigoCurso_TextChanged(object sender, EventArgs e)
+        {
+            var filtro = txtCodigoCurso.Text.Trim();
+            var cursosFiltrados = cursos.Where(c => c["Codigo"]?.ToString().Contains(filtro) == true).ToList();
+            datagCursos.Rows.Clear();
+            foreach (var curso in cursosFiltrados)
+            {
+                datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
+            }
+        }
     }
 }
