@@ -79,6 +79,7 @@ namespace SistemaDeUniversidad
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PersonChalkboard;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
