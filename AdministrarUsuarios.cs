@@ -67,33 +67,40 @@ namespace SistemaDeUniversidad
             {
                 DataGridViewRow fila = datagridUsuarios.Rows[e.RowIndex];
 
-                string usuario = datagridUsuarios.SelectedRows[0].Cells[1].Value.ToString();
-                txtUsuario.Text = usuario;
+                
+                txtCedula.Text = fila.Cells[0].Value?.ToString();
+                txtUsuario.Text = fila.Cells[1].Value?.ToString();
+                txtCorreo.Text = fila.Cells[3].Value?.ToString();
+                cboxRol.Text = fila.Cells[4].Value?.ToString();
 
-                string correo = datagridUsuarios.SelectedRows[0].Cells[3].Value.ToString();
-                txtCorreo.Text = correo;
-
-                string cedula = datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString();
-                txtCedula.Text = cedula;
-
-                string rol = datagridUsuarios.SelectedRows[0].Cells[4].Value.ToString();
-                cboxRol.Text = rol;
-
+                
                 if (fila.Cells[2].Value != null)
                 {
-                    datePersona.Value = Convert.ToDateTime(fila.Cells[2].Value);
-                }
+                    string valorCelda = fila.Cells[2].Value.ToString();
+                    DateTime fechaConvertida;
 
-                if (EstaActivo())
-                {
-                    chkEstado.Checked = true;
-                }
-                else
-                {
-                    chkEstado.Checked = false;
+                   
+                    if (DateTime.TryParse(valorCelda, out fechaConvertida))
+                    {
+                        datePersona.Value = fechaConvertida;
+                    }
+                    else
+                    {
+                       
+                        datePersona.Value = DateTime.Now;
+                    }
                 }
             }
-            
+            else
+            {
+                if(EstaActivo())
+                    chkEstado.Checked = true;
+                else
+                {
+                    chkEstado.Checked = false; 
+                }
+            }
+
         }
 
         private bool EstaActivo()
