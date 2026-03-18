@@ -29,7 +29,7 @@ namespace SistemaDeUniversidad
             registroCursos.Show();
         }
 
-        private void lblUsuarios_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
             Contenedor.Controls.Clear();
