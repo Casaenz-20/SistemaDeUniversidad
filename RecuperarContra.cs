@@ -23,7 +23,10 @@ namespace SistemaDeUniversidad
 
         private void btnRecuperar_Click(object sender, EventArgs e)
         {
-
+            //MailMessage correo = new MailMessage();
+            //MailMessage();
+            //correo.From = new;
+            //MailAddress("upa284581@gmail.com");
         }
     }
 }

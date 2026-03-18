@@ -56,7 +56,7 @@ namespace SistemaDeUniversidad
             // 
             this.GunaPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.GunaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.GunaPanel.BackColor = System.Drawing.Color.SkyBlue;
             this.GunaPanel.Controls.Add(this.RegisCursos);
             this.GunaPanel.Controls.Add(this.btnUsuariosPanel);
             this.GunaPanel.Location = new System.Drawing.Point(-2, -2);
@@ -69,12 +69,12 @@ namespace SistemaDeUniversidad
             this.RegisCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.RegisCursos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RegisCursos.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.RegisCursos.IconColor = System.Drawing.Color.Black;
+            this.RegisCursos.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.RegisCursos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RegisCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegisCursos.Location = new System.Drawing.Point(14, 90);
+            this.RegisCursos.Location = new System.Drawing.Point(14, 78);
             this.RegisCursos.Name = "RegisCursos";
-            this.RegisCursos.Size = new System.Drawing.Size(290, 48);
+            this.RegisCursos.Size = new System.Drawing.Size(290, 60);
             this.RegisCursos.TabIndex = 3;
             this.RegisCursos.Text = "Cursos";
             this.RegisCursos.UseVisualStyleBackColor = false;
@@ -85,12 +85,12 @@ namespace SistemaDeUniversidad
             this.btnUsuariosPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnUsuariosPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUsuariosPanel.IconChar = FontAwesome.Sharp.IconChar.PersonChalkboard;
-            this.btnUsuariosPanel.IconColor = System.Drawing.Color.Black;
+            this.btnUsuariosPanel.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUsuariosPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuariosPanel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuariosPanel.Location = new System.Drawing.Point(14, 170);
             this.btnUsuariosPanel.Name = "btnUsuariosPanel";
-            this.btnUsuariosPanel.Size = new System.Drawing.Size(290, 48);
+            this.btnUsuariosPanel.Size = new System.Drawing.Size(290, 58);
             this.btnUsuariosPanel.TabIndex = 2;
             this.btnUsuariosPanel.Text = "Usuarios";
             this.btnUsuariosPanel.UseVisualStyleBackColor = false;

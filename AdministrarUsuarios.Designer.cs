@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.txtCedula = new Krypton.Toolkit.KryptonTextBox();
             this.cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             this.cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             this.cuiLabel3 = new CuoreUI.Controls.cuiLabel();
-            this.datePersona = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             this.txtCorreo = new Krypton.Toolkit.KryptonTextBox();
             this.cboxRol = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,6 +43,7 @@
             this.chkEstado = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.datagridUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mskFechaPersona = new System.Windows.Forms.MaskedTextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel1.Location = new System.Drawing.Point(200, 12);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(697, 66);
+            this.kryptonLabel1.Size = new System.Drawing.Size(697, 56);
             this.kryptonLabel1.TabIndex = 1;
             this.kryptonLabel1.Values.Text = "Base De Datos - Usuarios";
             // 
@@ -79,7 +79,7 @@
             this.cuiLabel1.Location = new System.Drawing.Point(57, 75);
             this.cuiLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel1.Name = "cuiLabel1";
-            this.cuiLabel1.Size = new System.Drawing.Size(120, 31);
+            this.cuiLabel1.Size = new System.Drawing.Size(120, 21);
             this.cuiLabel1.TabIndex = 3;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -90,7 +90,7 @@
             this.cuiLabel2.Location = new System.Drawing.Point(57, 124);
             this.cuiLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(120, 31);
+            this.cuiLabel2.Size = new System.Drawing.Size(92, 36);
             this.cuiLabel2.TabIndex = 5;
             this.cuiLabel2.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -101,23 +101,9 @@
             this.cuiLabel3.Location = new System.Drawing.Point(368, 75);
             this.cuiLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel3.Name = "cuiLabel3";
-            this.cuiLabel3.Size = new System.Drawing.Size(103, 31);
+            this.cuiLabel3.Size = new System.Drawing.Size(88, 31);
             this.cuiLabel3.TabIndex = 6;
             this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // datePersona
-            // 
-            this.datePersona.Checked = true;
-            this.datePersona.FillColor = System.Drawing.Color.Silver;
-            this.datePersona.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.datePersona.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datePersona.Location = new System.Drawing.Point(464, 70);
-            this.datePersona.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datePersona.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.datePersona.Name = "datePersona";
-            this.datePersona.Size = new System.Drawing.Size(530, 36);
-            this.datePersona.TabIndex = 7;
-            this.datePersona.Value = new System.DateTime(2026, 3, 18, 11, 30, 29, 82);
             // 
             // cuiLabel4
             // 
@@ -126,7 +112,7 @@
             this.cuiLabel4.Location = new System.Drawing.Point(57, 175);
             this.cuiLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel4.Name = "cuiLabel4";
-            this.cuiLabel4.Size = new System.Drawing.Size(120, 31);
+            this.cuiLabel4.Size = new System.Drawing.Size(120, 21);
             this.cuiLabel4.TabIndex = 9;
             this.cuiLabel4.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -152,7 +138,7 @@
             "Estudiante"});
             this.cboxRol.Location = new System.Drawing.Point(521, 124);
             this.cboxRol.Name = "cboxRol";
-            this.cboxRol.Size = new System.Drawing.Size(271, 36);
+            this.cboxRol.Size = new System.Drawing.Size(277, 36);
             this.cboxRol.TabIndex = 10;
             // 
             // cuiLabel5
@@ -162,7 +148,7 @@
             this.cuiLabel5.Location = new System.Drawing.Point(449, 134);
             this.cuiLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel5.Name = "cuiLabel5";
-            this.cuiLabel5.Size = new System.Drawing.Size(74, 21);
+            this.cuiLabel5.Size = new System.Drawing.Size(74, 33);
             this.cuiLabel5.TabIndex = 11;
             this.cuiLabel5.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -175,7 +161,7 @@
             this.chkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEstado.Location = new System.Drawing.Point(502, 175);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(124, 41);
+            this.chkEstado.Size = new System.Drawing.Size(124, 43);
             this.chkEstado.TabIndex = 12;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -192,20 +178,20 @@
             // 
             // datagridUsuarios
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.datagridUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.datagridUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datagridUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.datagridUsuarios.ColumnHeadersHeight = 35;
             this.datagridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.datagridUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -214,14 +200,14 @@
             this.Correo,
             this.FechaNacimiento,
             this.Rol});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridUsuarios.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagridUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
             this.datagridUsuarios.Location = new System.Drawing.Point(3, 281);
             this.datagridUsuarios.Name = "datagridUsuarios";
@@ -255,11 +241,19 @@
             this.datagridUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.datagridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridUsuarios_CellClick);
             // 
+            // mskFechaPersona
+            // 
+            this.mskFechaPersona.Location = new System.Drawing.Point(463, 75);
+            this.mskFechaPersona.Name = "mskFechaPersona";
+            this.mskFechaPersona.Size = new System.Drawing.Size(229, 26);
+            this.mskFechaPersona.TabIndex = 15;
+            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.FillWeight = 120F;
             this.ID.HeaderText = "Cedula";
-            this.ID.MinimumWidth = 8;
+            this.ID.MinimumWidth = 10;
             this.ID.Name = "ID";
             // 
             // Usuario
@@ -295,6 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 562);
+            this.Controls.Add(this.mskFechaPersona);
             this.Controls.Add(this.datagridUsuarios);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.chkEstado);
@@ -302,7 +297,6 @@
             this.Controls.Add(this.cboxRol);
             this.Controls.Add(this.cuiLabel4);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.datePersona);
             this.Controls.Add(this.cuiLabel3);
             this.Controls.Add(this.cuiLabel2);
             this.Controls.Add(this.cuiLabel1);
@@ -324,7 +318,6 @@
         private CuoreUI.Controls.cuiLabel cuiLabel1;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker datePersona;
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private Krypton.Toolkit.KryptonTextBox txtCorreo;
         private Guna.UI2.WinForms.Guna2ComboBox cboxRol;
@@ -332,6 +325,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox chkEstado;
         private System.Windows.Forms.TextBox txtUsuario;
         private Guna.UI2.WinForms.Guna2DataGridView datagridUsuarios;
+        private System.Windows.Forms.MaskedTextBox mskFechaPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;

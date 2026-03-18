@@ -49,6 +49,7 @@ namespace SistemaDeUniversidad
         }
 
         private Func<string, bool> ArchivoExiste = (ruta) => System.IO.File.Exists(ruta);
+       
 
         private void txtCedula_TextChanged(object sender, EventArgs e)
         {
@@ -63,44 +64,43 @@ namespace SistemaDeUniversidad
 
         private void datagridUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                DataGridViewRow fila = datagridUsuarios.Rows[e.RowIndex];
-
-                
-                txtCedula.Text = fila.Cells[0].Value?.ToString();
-                txtUsuario.Text = fila.Cells[1].Value?.ToString();
-                txtCorreo.Text = fila.Cells[3].Value?.ToString();
-                cboxRol.Text = fila.Cells[4].Value?.ToString();
-
-                
-                if (fila.Cells[2].Value != null)
+                if (e.RowIndex >= 0)
                 {
-                    string valorCelda = fila.Cells[2].Value.ToString();
-                    DateTime fechaConvertida;
 
-                   
-                    if (DateTime.TryParse(valorCelda, out fechaConvertida))
+                    DataGridViewRow fila = datagridUsuarios.Rows[e.RowIndex];
+
+
+                    txtCedula.Text = Convert.ToString(fila.Cells[0].Value);
+                    txtUsuario.Text = Convert.ToString(fila.Cells[1].Value);
+                    txtCorreo.Text = Convert.ToString(fila.Cells[3].Value);
+
+
+                    string tipoUsuario = Convert.ToString(fila.Cells[4].Value);
+                    cboxRol.SelectedIndex = cboxRol.FindStringExact(tipoUsuario);
+
+
+                    if (DateTime.TryParse(Convert.ToString(fila.Cells[2].Value), out DateTime fecha))
                     {
-                        datePersona.Value = fechaConvertida;
+                        mskFechaPersona.Text = fecha.ToString("yyyy/MM/dd");
+                    }
+
+
+                    if (EstaActivo())
+                    {
+                        chkEstado.Checked = true;
                     }
                     else
                     {
-                       
-                        datePersona.Value = DateTime.Now;
+                        chkEstado.Checked = false;
                     }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if(EstaActivo())
-                    chkEstado.Checked = true;
-                else
-                {
-                    chkEstado.Checked = false; 
-                }
+                MessageBox.Show("Error de seleccion" + ex.Message,"Error");
             }
-
         }
 
         private bool EstaActivo()
