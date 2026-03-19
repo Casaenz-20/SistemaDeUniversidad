@@ -42,25 +42,36 @@ namespace SistemaDeUniversidad
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             DialogResult pregunta = MessageBox.Show("¿Deseas guardar los cambios realizados?", "Confirmar cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (pregunta == DialogResult.Yes)
             {
+                // Buscamos el objeto específico dentro de la lista global
                 JObject usuario_Encontrado = AdministrarUsuarios.usuarios.FirstOrDefault(u => (string)u["ID"] == txtCedula.Text);
+
                 if (usuario_Encontrado != null)
                 {
-                    ListaUsuarios["ID"] = txtCedula.Text;
-                    ListaUsuarios["Usuario"] = txtUsuario.Text;
-                    ListaUsuarios["FechaNacimiento"] = txtCorreo.Text;
-                    ListaUsuarios["Correo"] = mskFechaPersona.Text;
-                    ListaUsuarios["TipoUsuario"] = cboxRol.Text;
-                    ListaUsuarios["Activo"] = chkEstado.Checked;
-                    GuardarCambiosJSON(Settings.Default.ListUser, ListaUsuarios);
+                    // Modificamos el objeto encontrado directamente
+                    usuario_Encontrado["ID"] = txtCedula.Text;
+                    usuario_Encontrado["Usuario"] = txtUsuario.Text;
+                    usuario_Encontrado["FechaNacimiento"] = mskFechaPersona.Text; // Corregido: msk para fecha
+                    usuario_Encontrado["Correo"] = txtCorreo.Text;               // Corregido: txt para correo
+                    usuario_Encontrado["TipoUsuario"] = cboxRol.Text;
+                    usuario_Encontrado["Activo"] = chkEstado.Checked;
+
+                    // Guardamos la lista completa (que ya contiene al usuario modificado)
+                    GuardarCambiosJSON(Settings.Default.ListUser);
+
                     AdministrarUsuarios.ImprrimirListaUser(datagUser, AdministrarUsuarios.usuarios);
                     this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el usuario para actualizar.");
                 }
             }
         }
 
-        private void GuardarCambiosJSON(string listUser, JObject listaUsuarios)
+        private void GuardarCambiosJSON(string listUser)
         {
            File.WriteAllText(listUser, JsonConvert.SerializeObject(AdministrarUsuarios.usuarios, Formatting.Indented));
         }
