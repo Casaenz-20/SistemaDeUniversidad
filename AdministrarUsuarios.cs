@@ -119,7 +119,7 @@ namespace SistemaDeUniversidad
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int n_filas_seleccionadas = datagridUsuarios.SelectedRows.Count;
+            int n_filas_seleccionadas = datagridUsuarios.SelectedColumns.Count;
             if (n_filas_seleccionadas <= 0)
             {
                 MessageBox.Show("Debes de seleccionar una fila");
@@ -170,7 +170,8 @@ namespace SistemaDeUniversidad
                 ["FechaNacimiento"] = datagridUsuarios.SelectedRows[0].Cells[2].Value.ToString(),
                 ["Correo"] = datagridUsuarios.SelectedRows[0].Cells[3].Value.ToString(),
                 ["TipoUsuario"] = datagridUsuarios.SelectedRows[0].Cells[4].Value.ToString(),
-                ["Activo"] = EstaActivo()
+                ["Activo"] = EstaActivo(),
+                ["Contraseña"] = usuarios.FirstOrDefault(u => u["ID"].ToString() == datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString())?["Contraseña"]?.ToString() ?? ""
             }, datagridUsuarios);
                modificarUser.ShowDialog();
         }

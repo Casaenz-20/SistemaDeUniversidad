@@ -139,5 +139,44 @@ namespace SistemaDeUniversidad
             }
 
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int n_filas_seleccionadas = datagCursos.SelectedRows.Count;
+            if(n_filas_seleccionadas <= 0)
+            {
+                MessageBox.Show("Por favor, seleccione al menos un curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+               string codigoCurso = datagCursos.SelectedRows[0].Cells[0].Value.ToString();
+                bool EsNull = datagCursos.SelectedRows[0].Cells[0].Value.ToString() == null ? true : false;
+                if (EsNull)
+                {
+                    MessageBox.Show("No es una fila válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("¿Estás seguro de eliminar el curso con código " + codigoCurso + "?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        var cursoAEliminar = cursos.FirstOrDefault(c => c["Codigo"].ToString() == codigoCurso);
+                        if (cursoAEliminar != null)
+                        {
+                            cursos.Remove(cursoAEliminar);
+                            File.WriteAllText(Settings.Default.ListCursos, JsonConvert.SerializeObject(cursos, Formatting.Indented));
+                            datagCursos.Rows.RemoveAt(datagCursos.SelectedRows[0].Index);
+                            MessageBox.Show("Curso eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            
+        }
     }
 }

@@ -60,8 +60,9 @@
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel1.Controls.Add(this.kryptonPanel1);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(1, 0);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(711, 531);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(474, 345);
             this.guna2GradientPanel1.TabIndex = 10;
             this.guna2GradientPanel1.UseTransparentBackground = true;
             // 
@@ -75,11 +76,13 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
-            this.kryptonPanel1.Location = new System.Drawing.Point(62, 31);
+            this.kryptonPanel1.Location = new System.Drawing.Point(41, 20);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
+            this.kryptonPanel1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabCustom2;
-            this.kryptonPanel1.Size = new System.Drawing.Size(524, 445);
+            this.kryptonPanel1.Size = new System.Drawing.Size(381, 289);
+            this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.kryptonPanel1.TabIndex = 5;
             // 
             // btnRegistrarUser
@@ -102,23 +105,23 @@
             this.btnRegistrarUser.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRegistrarUser.Image = null;
             this.btnRegistrarUser.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnRegistrarUser.Location = new System.Drawing.Point(21, 367);
+            this.btnRegistrarUser.Location = new System.Drawing.Point(14, 239);
+            this.btnRegistrarUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarUser.Name = "btnRegistrarUser";
             this.btnRegistrarUser.NormalBackground = System.Drawing.Color.Transparent;
             this.btnRegistrarUser.NormalForeColor = System.Drawing.Color.Black;
             this.btnRegistrarUser.NormalImageTint = System.Drawing.Color.Black;
             this.btnRegistrarUser.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRegistrarUser.OutlineThickness = 1F;
-            this.btnRegistrarUser.Padding = new System.Windows.Forms.Padding(12);
             this.btnRegistrarUser.PressedBackground = System.Drawing.Color.Transparent;
             this.btnRegistrarUser.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnRegistrarUser.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnRegistrarUser.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRegistrarUser.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnRegistrarUser.Size = new System.Drawing.Size(153, 45);
+            this.btnRegistrarUser.Size = new System.Drawing.Size(131, 29);
             this.btnRegistrarUser.TabIndex = 10;
             this.btnRegistrarUser.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnRegistrarUser.TextPadding = 12;
+            this.btnRegistrarUser.TextPadding = -1;
             this.btnRegistrarUser.TextSpacing = 2;
             this.btnRegistrarUser.Click += new System.EventHandler(this.btnRegistrarUser_Click);
             // 
@@ -134,12 +137,12 @@
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.IconLeft = global::SistemaDeUniversidad.Properties.Resources.usuario;
-            this.txtUser.Location = new System.Drawing.Point(194, 85);
+            this.txtUser.Location = new System.Drawing.Point(150, 64);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.PlaceholderText = "";
             this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(286, 44);
+            this.txtUser.Size = new System.Drawing.Size(191, 29);
             this.txtUser.TabIndex = 9;
             // 
             // txtIniciar
@@ -162,23 +165,23 @@
             this.txtIniciar.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.Image = null;
             this.txtIniciar.ImageExpand = new System.Drawing.Point(0, 0);
-            this.txtIniciar.Location = new System.Drawing.Point(249, 234);
+            this.txtIniciar.Location = new System.Drawing.Point(216, 159);
+            this.txtIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.txtIniciar.Name = "txtIniciar";
             this.txtIniciar.NormalBackground = System.Drawing.Color.Transparent;
             this.txtIniciar.NormalForeColor = System.Drawing.Color.Black;
             this.txtIniciar.NormalImageTint = System.Drawing.Color.Black;
             this.txtIniciar.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.OutlineThickness = 1F;
-            this.txtIniciar.Padding = new System.Windows.Forms.Padding(12);
             this.txtIniciar.PressedBackground = System.Drawing.Color.Transparent;
             this.txtIniciar.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtIniciar.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtIniciar.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.Rounding = new System.Windows.Forms.Padding(8);
-            this.txtIniciar.Size = new System.Drawing.Size(153, 45);
+            this.txtIniciar.Size = new System.Drawing.Size(139, 29);
             this.txtIniciar.TabIndex = 6;
             this.txtIniciar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.txtIniciar.TextPadding = 12;
+            this.txtIniciar.TextPadding = -1;
             this.txtIniciar.TextSpacing = 2;
             this.txtIniciar.Click += new System.EventHandler(this.txtIniciar_Click);
             // 
@@ -194,17 +197,18 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::SistemaDeUniversidad.Properties.Resources.simbolo_de_candado_de_bloqueo_para_interfaz_de_seguridad;
-            this.txtPassword.Location = new System.Drawing.Point(194, 179);
+            this.txtPassword.Location = new System.Drawing.Point(164, 125);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(286, 44);
+            this.txtPassword.Size = new System.Drawing.Size(191, 29);
             this.txtPassword.TabIndex = 8;
             // 
             // kryptonLinkLabel1
             // 
-            this.kryptonLinkLabel1.Location = new System.Drawing.Point(44, 250);
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(29, 162);
+            this.kryptonLinkLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
             this.kryptonLinkLabel1.Size = new System.Drawing.Size(190, 29);
             this.kryptonLinkLabel1.TabIndex = 4;
@@ -214,16 +218,19 @@
             // kryptonLabel3
             // 
             this.kryptonLabel3.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(161, 3);
+            this.kryptonLabel3.Location = new System.Drawing.Point(83, 0);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(258, 42);
+            this.kryptonLabel3.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalOffice2003;
+            this.kryptonLabel3.Size = new System.Drawing.Size(258, 44);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 7;
             this.kryptonLabel3.Values.Text = "Inicio de Seccion";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(44, 193);
+            this.kryptonLabel1.Location = new System.Drawing.Point(29, 125);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(130, 30);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,19 +240,22 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.AutoSize = false;
-            this.kryptonLabel2.Location = new System.Drawing.Point(57, 99);
+            this.kryptonLabel2.Location = new System.Drawing.Point(38, 64);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(99, 30);
+            this.kryptonLabel2.Size = new System.Drawing.Size(107, 29);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 6;
             this.kryptonLabel2.Values.Text = "Usuario";
             // 
             // LoginUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 511);
+            this.ClientSize = new System.Drawing.Size(469, 332);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginUser";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginUser_Load);

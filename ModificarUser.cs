@@ -34,7 +34,8 @@ namespace SistemaDeUniversidad
             txtCorreo.Text = (string)ListaUsuarios["FechaNacimiento"];
             mskFechaPersona.Text = (string)ListaUsuarios["Correo"];
             cboxRol.Text = (string)ListaUsuarios["TipoUsuario"];
-           chkEstado.Checked = (bool)ListaUsuarios["Activo"];
+            chkEstado.Checked = (bool)ListaUsuarios["Activo"];
+            txtContrasena.Text = (string)ListaUsuarios["Contraseña"];
 
 
         }
@@ -53,10 +54,11 @@ namespace SistemaDeUniversidad
                     // Modificamos el objeto encontrado directamente
                     usuario_Encontrado["ID"] = txtCedula.Text;
                     usuario_Encontrado["Usuario"] = txtUsuario.Text;
-                    usuario_Encontrado["FechaNacimiento"] = mskFechaPersona.Text; // Corregido: msk para fecha
-                    usuario_Encontrado["Correo"] = txtCorreo.Text;               // Corregido: txt para correo
+                    usuario_Encontrado["FechaNacimiento"] = mskFechaPersona.Text; 
+                    usuario_Encontrado["Correo"] = txtCorreo.Text;               
                     usuario_Encontrado["TipoUsuario"] = cboxRol.Text;
                     usuario_Encontrado["Activo"] = chkEstado.Checked;
+                    usuario_Encontrado["Contraseña"] = txtContrasena.Text;
 
                     // Guardamos la lista completa (que ya contiene al usuario modificado)
                     GuardarCambiosJSON(Settings.Default.ListUser);
