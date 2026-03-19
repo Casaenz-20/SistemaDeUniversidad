@@ -80,7 +80,7 @@
             this.cuiLabel5.Content = "Rol:";
             this.cuiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel5.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel5.Location = new System.Drawing.Point(43, 179);
+            this.cuiLabel5.Location = new System.Drawing.Point(43, 173);
             this.cuiLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel5.Name = "cuiLabel5";
             this.cuiLabel5.Size = new System.Drawing.Size(115, 42);
@@ -100,7 +100,7 @@
             this.cboxRol.Items.AddRange(new object[] {
             "Administrador",
             "Estudiante"});
-            this.cboxRol.Location = new System.Drawing.Point(174, 179);
+            this.cboxRol.Location = new System.Drawing.Point(174, 173);
             this.cboxRol.Name = "cboxRol";
             this.cboxRol.Size = new System.Drawing.Size(249, 36);
             this.cboxRol.TabIndex = 31;
@@ -129,10 +129,10 @@
             this.cuiLabel3.Content = "Fecha:";
             this.cuiLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel3.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel3.Location = new System.Drawing.Point(570, 14);
+            this.cuiLabel3.Location = new System.Drawing.Point(542, 14);
             this.cuiLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel3.Name = "cuiLabel3";
-            this.cuiLabel3.Size = new System.Drawing.Size(129, 52);
+            this.cuiLabel3.Size = new System.Drawing.Size(157, 52);
             this.cuiLabel3.TabIndex = 28;
             this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -160,10 +160,10 @@
             this.cuiLabel2.Content = "Usuario:";
             this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel2.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel2.Location = new System.Drawing.Point(601, 122);
+            this.cuiLabel2.Location = new System.Drawing.Point(567, 122);
             this.cuiLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(129, 33);
+            this.cuiLabel2.Size = new System.Drawing.Size(163, 53);
             this.cuiLabel2.TabIndex = 36;
             this.cuiLabel2.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
