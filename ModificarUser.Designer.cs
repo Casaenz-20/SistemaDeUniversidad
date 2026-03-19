@@ -52,10 +52,11 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(813, 122);
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(758, 76);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(393, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(393, 32);
             this.txtUsuario.TabIndex = 34;
             // 
             // chkEstado
@@ -65,7 +66,7 @@
             this.chkEstado.CheckedState.BorderThickness = 0;
             this.chkEstado.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEstado.Location = new System.Drawing.Point(54, 241);
+            this.chkEstado.Location = new System.Drawing.Point(617, 137);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(125, 48);
             this.chkEstado.TabIndex = 33;
@@ -119,9 +120,10 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(200, 92);
+            this.txtCorreo.Location = new System.Drawing.Point(174, 92);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(312, 31);
+            this.txtCorreo.Size = new System.Drawing.Size(312, 30);
+            this.txtCorreo.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.TabIndex = 29;
             // 
             // cuiLabel3
@@ -141,17 +143,19 @@
             this.cuiLabel1.Content = "Cedula";
             this.cuiLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel1.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel1.Location = new System.Drawing.Point(13, 25);
+            this.cuiLabel1.Location = new System.Drawing.Point(-16, 25);
             this.cuiLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel1.Name = "cuiLabel1";
-            this.cuiLabel1.Size = new System.Drawing.Size(126, 57);
+            this.cuiLabel1.Size = new System.Drawing.Size(155, 57);
             this.cuiLabel1.TabIndex = 27;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtCedula
             // 
+            this.txtCedula.Enabled = false;
             this.txtCedula.Location = new System.Drawing.Point(174, 25);
             this.txtCedula.Name = "txtCedula";
+            this.txtCedula.ReadOnly = true;
             this.txtCedula.Size = new System.Drawing.Size(167, 31);
             this.txtCedula.TabIndex = 26;
             // 
@@ -160,7 +164,7 @@
             this.cuiLabel2.Content = "Usuario:";
             this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel2.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel2.Location = new System.Drawing.Point(567, 122);
+            this.cuiLabel2.Location = new System.Drawing.Point(566, 76);
             this.cuiLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel2.Name = "cuiLabel2";
             this.cuiLabel2.Size = new System.Drawing.Size(163, 53);
@@ -172,10 +176,10 @@
             this.btnGuardarCambios.CheckButton = false;
             this.btnGuardarCambios.Checked = false;
             this.btnGuardarCambios.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btnGuardarCambios.CheckedForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambios.CheckedImageTint = System.Drawing.Color.White;
+            this.btnGuardarCambios.CheckedForeColor = System.Drawing.Color.Gray;
+            this.btnGuardarCambios.CheckedImageTint = System.Drawing.Color.DimGray;
             this.btnGuardarCambios.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btnGuardarCambios.Content = "Your text here!";
+            this.btnGuardarCambios.Content = "Guardar Camabios";
             this.btnGuardarCambios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarCambios.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -188,7 +192,7 @@
             this.btnGuardarCambios.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnGuardarCambios.Location = new System.Drawing.Point(491, 266);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.NormalBackground = System.Drawing.Color.White;
+            this.btnGuardarCambios.NormalBackground = System.Drawing.Color.DodgerBlue;
             this.btnGuardarCambios.NormalForeColor = System.Drawing.Color.Black;
             this.btnGuardarCambios.NormalImageTint = System.Drawing.Color.Black;
             this.btnGuardarCambios.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -204,6 +208,7 @@
             this.btnGuardarCambios.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnGuardarCambios.TextPadding = 12;
             this.btnGuardarCambios.TextSpacing = 2;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // ModificarUser
             // 
