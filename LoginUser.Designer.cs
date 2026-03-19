@@ -32,6 +32,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            this.btnRegistrarUser = new CuoreUI.Controls.cuiButton();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIniciar = new CuoreUI.Controls.cuiButton();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,7 +40,6 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.btnRegistrarUser = new CuoreUI.Controls.cuiButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -55,12 +55,15 @@
             this.guna2GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BackgroundImage = global::SistemaDeUniversidad.Properties.Resources._8275340;
+            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel1.Controls.Add(this.kryptonPanel1);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(1, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(711, 531);
             this.guna2GradientPanel1.TabIndex = 10;
+            this.guna2GradientPanel1.UseTransparentBackground = true;
             // 
             // kryptonPanel1
             // 
@@ -74,9 +77,50 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
             this.kryptonPanel1.Location = new System.Drawing.Point(62, 31);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom3;
+            this.kryptonPanel1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
+            this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabCustom2;
             this.kryptonPanel1.Size = new System.Drawing.Size(524, 445);
             this.kryptonPanel1.TabIndex = 5;
+            // 
+            // btnRegistrarUser
+            // 
+            this.btnRegistrarUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.CheckButton = false;
+            this.btnRegistrarUser.Checked = false;
+            this.btnRegistrarUser.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.btnRegistrarUser.CheckedForeColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.CheckedImageTint = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.btnRegistrarUser.Content = "Crear Usuario";
+            this.btnRegistrarUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarUser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRegistrarUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnRegistrarUser.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarUser.HoverBackground = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.HoverForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrarUser.HoverImageTint = System.Drawing.Color.DimGray;
+            this.btnRegistrarUser.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRegistrarUser.Image = null;
+            this.btnRegistrarUser.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnRegistrarUser.Location = new System.Drawing.Point(21, 367);
+            this.btnRegistrarUser.Name = "btnRegistrarUser";
+            this.btnRegistrarUser.NormalBackground = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.NormalForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarUser.NormalImageTint = System.Drawing.Color.Black;
+            this.btnRegistrarUser.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRegistrarUser.OutlineThickness = 1F;
+            this.btnRegistrarUser.Padding = new System.Windows.Forms.Padding(12);
+            this.btnRegistrarUser.PressedBackground = System.Drawing.Color.Transparent;
+            this.btnRegistrarUser.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnRegistrarUser.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnRegistrarUser.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRegistrarUser.Rounding = new System.Windows.Forms.Padding(8);
+            this.btnRegistrarUser.Size = new System.Drawing.Size(153, 45);
+            this.btnRegistrarUser.TabIndex = 10;
+            this.btnRegistrarUser.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnRegistrarUser.TextPadding = 12;
+            this.btnRegistrarUser.TextSpacing = 2;
+            this.btnRegistrarUser.Click += new System.EventHandler(this.btnRegistrarUser_Click);
             // 
             // txtUser
             // 
@@ -195,46 +239,6 @@
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 6;
             this.kryptonLabel2.Values.Text = "Usuario";
-            // 
-            // btnRegistrarUser
-            // 
-            this.btnRegistrarUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.CheckButton = false;
-            this.btnRegistrarUser.Checked = false;
-            this.btnRegistrarUser.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btnRegistrarUser.CheckedForeColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.CheckedImageTint = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btnRegistrarUser.Content = "Crear Usuario";
-            this.btnRegistrarUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarUser.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRegistrarUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnRegistrarUser.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarUser.HoverBackground = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.HoverForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrarUser.HoverImageTint = System.Drawing.Color.DimGray;
-            this.btnRegistrarUser.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegistrarUser.Image = null;
-            this.btnRegistrarUser.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnRegistrarUser.Location = new System.Drawing.Point(21, 367);
-            this.btnRegistrarUser.Name = "btnRegistrarUser";
-            this.btnRegistrarUser.NormalBackground = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.NormalForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarUser.NormalImageTint = System.Drawing.Color.Black;
-            this.btnRegistrarUser.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegistrarUser.OutlineThickness = 1F;
-            this.btnRegistrarUser.Padding = new System.Windows.Forms.Padding(12);
-            this.btnRegistrarUser.PressedBackground = System.Drawing.Color.Transparent;
-            this.btnRegistrarUser.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.btnRegistrarUser.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.btnRegistrarUser.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegistrarUser.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnRegistrarUser.Size = new System.Drawing.Size(153, 45);
-            this.btnRegistrarUser.TabIndex = 10;
-            this.btnRegistrarUser.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnRegistrarUser.TextPadding = 12;
-            this.btnRegistrarUser.TextSpacing = 2;
-            this.btnRegistrarUser.Click += new System.EventHandler(this.btnRegistrarUser_Click);
             // 
             // LoginUser
             // 

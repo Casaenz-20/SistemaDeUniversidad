@@ -64,10 +64,10 @@
             this.chkEstado.CheckedState.BorderRadius = 0;
             this.chkEstado.CheckedState.BorderThickness = 0;
             this.chkEstado.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEstado.Location = new System.Drawing.Point(77, 245);
+            this.chkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEstado.Location = new System.Drawing.Point(54, 241);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(97, 48);
+            this.chkEstado.Size = new System.Drawing.Size(125, 48);
             this.chkEstado.TabIndex = 33;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -80,7 +80,7 @@
             this.cuiLabel5.Content = "Rol:";
             this.cuiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel5.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel5.Location = new System.Drawing.Point(43, 173);
+            this.cuiLabel5.Location = new System.Drawing.Point(24, 173);
             this.cuiLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cuiLabel5.Name = "cuiLabel5";
             this.cuiLabel5.Size = new System.Drawing.Size(115, 42);
