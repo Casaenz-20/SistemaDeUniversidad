@@ -114,5 +114,30 @@ namespace SistemaDeUniversidad
                 datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
             }
         }
+
+        private void datagCursos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow filaSeleccionada = datagCursos.Rows[e.RowIndex];
+
+                    
+                    txtCodigoCurso.Text = Convert.ToString(filaSeleccionada.Cells[0].Value);
+                    txtNombreCurso.Text = Convert.ToString(filaSeleccionada.Cells[1].Value);
+                    txtPrecio.Text = Convert.ToString(filaSeleccionada.Cells[2].Value);
+
+                    string recinto = Convert.ToString(filaSeleccionada.Cells[3].Value);
+                    cboResinto.Text = recinto;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar el curso: " + ex.Message,
+                                "Error de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

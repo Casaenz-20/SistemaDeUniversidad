@@ -61,7 +61,7 @@
             this.Nombre,
             this.Precio,
             this.Resinto});
-            this.datagCursos.Location = new System.Drawing.Point(3, 364);
+            this.datagCursos.Location = new System.Drawing.Point(0, 367);
             this.datagCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datagCursos.Name = "datagCursos";
             this.datagCursos.RowHeadersVisible = false;
@@ -69,6 +69,7 @@
             this.datagCursos.RowTemplate.Height = 28;
             this.datagCursos.Size = new System.Drawing.Size(1318, 481);
             this.datagCursos.TabIndex = 0;
+            this.datagCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagCursos_CellClick);
             // 
             // Codigo
             // 
@@ -251,7 +252,7 @@
             this.btnGuardarCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGuardarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnGuardarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCurso.Location = new System.Drawing.Point(500, 252);
+            this.btnGuardarCurso.Location = new System.Drawing.Point(545, 260);
             this.btnGuardarCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardarCurso.Name = "btnGuardarCurso";
             this.btnGuardarCurso.Size = new System.Drawing.Size(202, 56);

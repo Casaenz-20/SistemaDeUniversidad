@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
+using File = System.IO.File;
 
 namespace SistemaDeUniversidad
 {
@@ -107,6 +108,64 @@ namespace SistemaDeUniversidad
         {
             bool CuentaActiva = usuarios.Any(u => u["Usuario"].ToString() == txtUsuario.Text && u["Activo"].ToObject<bool>() == true);
             return CuentaActiva;
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int n_filas_seleccionadas = datagridUsuarios.SelectedRows.Count;
+            if (n_filas_seleccionadas <= 0)
+            {
+                MessageBox.Show("Debes de seleccionar una fila");
+            }
+            else
+            {
+                if (datagridUsuarios.CurrentRow.IsNewRow)
+                {
+                    MessageBox.Show("No es una fila valida");
+                }
+                else
+                {
+                    string cedula_Persona = datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString();
+                    bool EsNull = datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString() == null ? true : false;
+                    if(EsNull)
+                    {
+                        MessageBox.Show("No es una fila valida");
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("¿Estás seguro de eliminar el usuario con cédula " + cedula_Persona + "?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            var usuarioAEliminar = usuarios.FirstOrDefault(u => u["ID"].ToString() == cedula_Persona);
+                            if (usuarioAEliminar != null)
+                            {
+                                usuarios.Remove(usuarioAEliminar);
+                                File.WriteAllText(Settings.Default.ListUser, JsonConvert.SerializeObject(usuarios, Formatting.Indented));
+                                datagridUsuarios.Rows.RemoveAt(datagridUsuarios.SelectedRows[0].Index);
+                                MessageBox.Show("Usuario eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró el usuario a eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarUser modificarUser = new ModificarUser(new JObject()
+            {
+                ["ID"] = datagridUsuarios.SelectedRows[0].Cells[0].Value.ToString(),
+                ["Usuario"] = datagridUsuarios.SelectedRows[0].Cells[1].Value.ToString(),
+                ["FechaNacimiento"] = datagridUsuarios.SelectedRows[0].Cells[2].Value.ToString(),
+                ["Correo"] = datagridUsuarios.SelectedRows[0].Cells[3].Value.ToString(),
+                ["TipoUsuario"] = datagridUsuarios.SelectedRows[0].Cells[4].Value.ToString(),
+                ["Activo"] = EstaActivo()
+            }, datagridUsuarios);
+               modificarUser.ShowDialog();
         }
     }
 }
