@@ -134,7 +134,7 @@
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(99, 31);
             this.guna2HtmlLabel4.TabIndex = 6;
-            this.guna2HtmlLabel4.Text = "Resinto:";
+            this.guna2HtmlLabel4.Text = "Recinto:";
             // 
             // btnModificar
             // 
