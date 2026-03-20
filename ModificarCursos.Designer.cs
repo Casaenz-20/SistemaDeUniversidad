@@ -35,8 +35,8 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPrecioMF = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cboResintoMF = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnModificar = new CuoreUI.Controls.cuiButton();
+            this.cboRecintoMF = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCodigoMF
@@ -136,29 +136,6 @@
             this.guna2HtmlLabel4.TabIndex = 6;
             this.guna2HtmlLabel4.Text = "Resinto:";
             // 
-            // cboResintoMF
-            // 
-            this.cboResintoMF.BackColor = System.Drawing.Color.Transparent;
-            this.cboResintoMF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboResintoMF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboResintoMF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboResintoMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboResintoMF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboResintoMF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboResintoMF.ItemHeight = 30;
-            this.cboResintoMF.Items.AddRange(new object[] {
-            "San José",
-            "Alajuela",
-            "Cartago",
-            "Heredia",
-            "Guanacaste",
-            "Puntarenas",
-            "Limón"});
-            this.cboResintoMF.Location = new System.Drawing.Point(645, 167);
-            this.cboResintoMF.Name = "cboResintoMF";
-            this.cboResintoMF.Size = new System.Drawing.Size(283, 36);
-            this.cboResintoMF.TabIndex = 7;
-            // 
             // btnModificar
             // 
             this.btnModificar.CheckButton = false;
@@ -198,13 +175,30 @@
             this.btnModificar.TextSpacing = 2;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // cboRecintoMF
+            // 
+            this.cboRecintoMF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRecintoMF.FormattingEnabled = true;
+            this.cboRecintoMF.Items.AddRange(new object[] {
+            "San José",
+            "Alajuela",
+            "Cartago",
+            "Heredia",
+            "Guanacaste",
+            "Puntarenas",
+            "Limón"});
+            this.cboRecintoMF.Location = new System.Drawing.Point(645, 166);
+            this.cboRecintoMF.Name = "cboRecintoMF";
+            this.cboRecintoMF.Size = new System.Drawing.Size(218, 37);
+            this.cboRecintoMF.TabIndex = 9;
+            // 
             // ModificarCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 421);
+            this.Controls.Add(this.cboRecintoMF);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.cboResintoMF);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtPrecioMF);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -215,6 +209,7 @@
             this.Name = "ModificarCursos";
             this.Text = "ModificarCursos";
             this.Load += new System.EventHandler(this.ModificarCursos_Load);
+            this.Shown += new System.EventHandler(this.ModificarCursos_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,7 +224,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecioMF;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2ComboBox cboResintoMF;
         private CuoreUI.Controls.cuiButton btnModificar;
+        private System.Windows.Forms.ComboBox cboRecintoMF;
     }
 }
