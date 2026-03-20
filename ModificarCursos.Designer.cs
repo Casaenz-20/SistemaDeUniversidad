@@ -209,7 +209,6 @@
             this.Name = "ModificarCursos";
             this.Text = "ModificarCursos";
             this.Load += new System.EventHandler(this.ModificarCursos_Load);
-            this.Shown += new System.EventHandler(this.ModificarCursos_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
