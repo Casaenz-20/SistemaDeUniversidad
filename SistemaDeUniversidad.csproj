@@ -114,6 +114,12 @@
     <Compile Include="LoginUser.Designer.cs">
       <DependentUpon>LoginUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCursos.Designer.cs">
+      <DependentUpon>ModificarCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUser.resx">
       <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCursos.resx">
+      <DependentUpon>ModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUser.resx">
       <DependentUpon>ModificarUser.cs</DependentUpon>

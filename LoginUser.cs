@@ -150,7 +150,7 @@ namespace SistemaDeUniversidad
         {
 
             {
-                return usuarios.Any(u => u["Usuario"].ToString() == txtUser.Text);
+                return usuarios.Any(u => u["Usuario"]?.ToString() == txtUser.Text);
             }
         }
 

@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.datagCursos = new Krypton.Toolkit.KryptonDataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Resinto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tripMenuCursos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCodigoCurso = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,12 +44,13 @@
             this.cboResinto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnGuardarCurso = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tripMenuCursos = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Recinto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tripMenuCursos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // datagCursos
@@ -64,45 +64,43 @@
             this.Codigo,
             this.Nombre,
             this.Precio,
-            this.Resinto});
+            this.Recinto});
             this.datagCursos.ContextMenuStrip = this.tripMenuCursos;
             this.datagCursos.Location = new System.Drawing.Point(0, 239);
             this.datagCursos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datagCursos.MultiSelect = false;
             this.datagCursos.Name = "datagCursos";
             this.datagCursos.RowHeadersVisible = false;
             this.datagCursos.RowHeadersWidth = 62;
             this.datagCursos.RowTemplate.Height = 28;
+            this.datagCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagCursos.Size = new System.Drawing.Size(879, 313);
             this.datagCursos.TabIndex = 0;
             this.datagCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagCursos_CellClick);
             // 
-            // Codigo
+            // tripMenuCursos
             // 
-            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.MinimumWidth = 8;
-            this.Codigo.Name = "Codigo";
+            this.tripMenuCursos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tripMenuCursos.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.tripMenuCursos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarToolStripMenuItem,
+            this.modificarToolStripMenuItem});
+            this.tripMenuCursos.Name = "tripMenuCursos";
+            this.tripMenuCursos.Size = new System.Drawing.Size(160, 68);
             // 
-            // Nombre
+            // eliminarToolStripMenuItem
             // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 8;
-            this.Nombre.Name = "Nombre";
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(159, 32);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
-            // Precio
+            // modificarToolStripMenuItem
             // 
-            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 8;
-            this.Precio.Name = "Precio";
-            // 
-            // Resinto
-            // 
-            this.Resinto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Resinto.HeaderText = "Resinto";
-            this.Resinto.MinimumWidth = 6;
-            this.Resinto.Name = "Resinto";
+            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // kryptonLabel1
             // 
@@ -269,28 +267,33 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // tripMenuCursos
+            // Codigo
             // 
-            this.tripMenuCursos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tripMenuCursos.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tripMenuCursos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eliminarToolStripMenuItem,
-            this.modificarToolStripMenuItem});
-            this.tripMenuCursos.Name = "tripMenuCursos";
-            this.tripMenuCursos.Size = new System.Drawing.Size(160, 68);
+            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.MinimumWidth = 8;
+            this.Codigo.Name = "Codigo";
             // 
-            // eliminarToolStripMenuItem
+            // Nombre
             // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 8;
+            this.Nombre.Name = "Nombre";
             // 
-            // modificarToolStripMenuItem
+            // Precio
             // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 8;
+            this.Precio.Name = "Precio";
+            // 
+            // Recinto
+            // 
+            this.Recinto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Recinto.HeaderText = "Resinto";
+            this.Recinto.MinimumWidth = 6;
+            this.Recinto.Name = "Recinto";
             // 
             // Cusos
             // 
@@ -313,8 +316,8 @@
             this.Size = new System.Drawing.Size(883, 551);
             this.Load += new System.EventHandler(this.Cusos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tripMenuCursos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,12 +336,12 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboResinto;
         private Guna.UI2.WinForms.Guna2Button btnGuardarCurso;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Resinto;
         private System.Windows.Forms.ContextMenuStrip tripMenuCursos;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Recinto;
     }
 }

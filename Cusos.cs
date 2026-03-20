@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Krypton.Toolkit;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SistemaDeUniversidad.Properties;
 using System;
@@ -36,11 +37,7 @@ namespace SistemaDeUniversidad
             }
             cursos = LeerCursos(Settings.Default.ListCursos);
 
-            datagCursos.Rows.Clear();
-            foreach (var curso in cursos)
-            {
-                datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
-            }
+            ImprimirListaCursos(datagCursos, cursos);
         }
 
         private List<JObject> LeerCursos(string listCursos)
@@ -85,9 +82,18 @@ namespace SistemaDeUniversidad
                     cursos.Add(nuevoCurso);
                     File.WriteAllText(Settings.Default.ListCursos, JsonConvert.SerializeObject(cursos, Formatting.Indented));
                     MessageBox.Show("Curso guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    datagCursos.Rows.Add(nuevoCurso["Codigo"], nuevoCurso["Nombre"], nuevoCurso["Precio"], nuevoCurso["Recinto"]);
+                    ImprimirListaCursos(datagCursos, cursos);
                     LimpiarCampos();
                 }
+            }
+        }
+
+        public static void ImprimirListaCursos(KryptonDataGridView datagCursos, List<JObject> cursos)
+        {
+            datagCursos.Rows.Clear();
+            foreach(var nuevoCurso in cursos)
+            {
+                datagCursos.Rows.Add(nuevoCurso["Codigo"], nuevoCurso["Nombre"], nuevoCurso["Precio"], nuevoCurso["Recinto"]);
             }
         }
 
@@ -142,41 +148,71 @@ namespace SistemaDeUniversidad
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int n_filas_seleccionadas = datagCursos.SelectedRows.Count;
-            if(n_filas_seleccionadas <= 0)
+            if (datagCursos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Por favor, seleccione al menos un curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debes seleccionar una fila completa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            }
-            else
-            {
-               string codigoCurso = datagCursos.SelectedRows[0].Cells[0].Value.ToString();
-                bool EsNull = datagCursos.SelectedRows[0].Cells[0].Value.ToString() == null ? true : false;
-                if (EsNull)
-                {
-                    MessageBox.Show("No es una fila válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    DialogResult resultado = MessageBox.Show("¿Estás seguro de eliminar el curso con código " + codigoCurso + "?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (resultado == DialogResult.Yes)
-                    {
-                        var cursoAEliminar = cursos.FirstOrDefault(c => c["Codigo"].ToString() == codigoCurso);
-                        if (cursoAEliminar != null)
-                        {
-                            cursos.Remove(cursoAEliminar);
-                            File.WriteAllText(Settings.Default.ListCursos, JsonConvert.SerializeObject(cursos, Formatting.Indented));
-                            datagCursos.Rows.RemoveAt(datagCursos.SelectedRows[0].Index);
-                            MessageBox.Show("Curso eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encontró el curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
+            var filaSeleccionada = datagCursos.SelectedRows[0];
+
             
+            if (filaSeleccionada.IsNewRow)
+            {
+                MessageBox.Show("La fila seleccionada no es válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           
+            object valorCelda = filaSeleccionada.Cells[0].Value;
+            string codigo_Curso = valorCelda?.ToString();
+
+            if (string.IsNullOrEmpty(codigo_Curso))
+            {
+                MessageBox.Show("El código del curso está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           
+            DialogResult resultado = MessageBox.Show($"¿Estás seguro de eliminar el curso {codigo_Curso}?",
+                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+            {
+                var cursoAEliminar = cursos.FirstOrDefault(c => c["Codigo"]?.ToString() == codigo_Curso);
+
+                if (cursoAEliminar != null)
+                { 
+                    cursos.Remove(cursoAEliminar);
+                    string json = JsonConvert.SerializeObject(cursos, Formatting.Indented);
+                    File.WriteAllText(Settings.Default.ListUser, json);
+                    datagCursos.Rows.Remove(filaSeleccionada);
+                    MessageBox.Show("Curso eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarCursos modificarCursos = new ModificarCursos(new JObject()
+            {
+                ["Codigo"] = datagCursos.SelectedRows[0].Cells[0].Value.ToString(),
+                ["Nombre"] = datagCursos.SelectedRows[0].Cells[1].Value.ToString(),
+                ["Precio"] = datagCursos.SelectedRows[0].Cells[2].Value.ToString(),
+                ["Resinto"] = datagCursos.SelectedRows[0].Cells[3].Value.ToString()
+            }, datagCursos);
+            modificarCursos.ShowDialog();
+                
+
+        }
+
+        internal static void ImprimirListaCursos(DataGridView dataCursos, List<JObject> cursos)
+        {
+            dataCursos.Rows.Clear();
+            foreach (var curso in cursos)
+            {
+                dataCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
+            }
         }
     }
 }
