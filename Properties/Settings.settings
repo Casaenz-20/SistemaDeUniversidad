@@ -8,5 +8,8 @@
     <Setting Name="ListCursos" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ListCursos.json</Value>
     </Setting>
+    <Setting Name="ListMatricula" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ListMatricula.json</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

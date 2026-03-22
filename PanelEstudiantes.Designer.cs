@@ -1,4 +1,4 @@
-﻿using 
+﻿ 
 namespace SistemaDeUniversidad
 {
     partial class PanelEstudiantes
@@ -33,29 +33,31 @@ namespace SistemaDeUniversidad
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnMatricular = new FontAwesome.Sharp.IconButton();
             this.btnRegistrMatricula = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.cuiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cuiPanel1
             // 
+            this.cuiPanel1.Controls.Add(this.iconButton1);
             this.cuiPanel1.Controls.Add(this.btnRegistrMatricula);
             this.cuiPanel1.Controls.Add(this.btnMatricular);
-            this.cuiPanel1.Location = new System.Drawing.Point(16, 5);
+            this.cuiPanel1.Location = new System.Drawing.Point(0, 5);
             this.cuiPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuiPanel1.Name = "cuiPanel1";
             this.cuiPanel1.OutlineThickness = 1F;
             this.cuiPanel1.PanelColor = System.Drawing.Color.White;
             this.cuiPanel1.PanelOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cuiPanel1.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiPanel1.Size = new System.Drawing.Size(431, 1092);
+            this.cuiPanel1.Size = new System.Drawing.Size(432, 1092);
             this.cuiPanel1.TabIndex = 0;
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(440, 5);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(431, 5);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1284, 1088);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1293, 1088);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // btnMatricular
@@ -82,6 +84,21 @@ namespace SistemaDeUniversidad
             this.btnRegistrMatricula.Text = "Registro de Matricula";
             this.btnRegistrMatricula.UseVisualStyleBackColor = true;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(12, 464);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(206, 35);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Cerrar Seccion";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // PanelEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -103,5 +120,6 @@ namespace SistemaDeUniversidad
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private FontAwesome.Sharp.IconButton btnRegistrMatricula;
         private FontAwesome.Sharp.IconButton btnMatricular;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

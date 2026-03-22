@@ -16,5 +16,12 @@ namespace SistemaDeUniversidad
         {
             InitializeComponent();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            LoginUser login = new LoginUser();
+            login.Show();
+            this.Close();
+        }
     }
 }
