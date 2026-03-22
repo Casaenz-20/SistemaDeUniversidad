@@ -55,7 +55,7 @@ namespace SistemaDeUniversidad
         {
 
             RecuperarContra recuperarContraseña = new RecuperarContra();
-            recuperarContraseña.ShowDialog();
+            recuperarContraseña.Show();
             this.Hide();
         }
 
