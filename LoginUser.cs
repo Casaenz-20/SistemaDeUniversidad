@@ -15,7 +15,9 @@ using System.Windows.Forms;
 namespace SistemaDeUniversidad
 {
     public partial class LoginUser : Form
+
     {
+        private bool showPassword = false;
         public static List<JObject> usuarios = new List<JObject>();
         int intentos = 3;
         public LoginUser()
@@ -161,6 +163,19 @@ namespace SistemaDeUniversidad
             this.Hide();
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+            if(showPassword)
+            {
+                txtPassword.PasswordChar ='\0';
+                pictureBox1.Image = Resources.visibilidad;
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                pictureBox1.Image = Resources.ojo_cerrado;
+            }
+        }
     }
 }

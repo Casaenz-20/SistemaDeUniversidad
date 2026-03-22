@@ -40,10 +40,12 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -68,6 +70,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.pictureBox1);
             this.kryptonPanel1.Controls.Add(this.btnRegistrarUser);
             this.kryptonPanel1.Controls.Add(this.txtUser);
             this.kryptonPanel1.Controls.Add(this.txtIniciar);
@@ -198,9 +201,10 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::SistemaDeUniversidad.Properties.Resources.simbolo_de_candado_de_bloqueo_para_interfaz_de_seguridad;
-            this.txtPassword.Location = new System.Drawing.Point(219, 154);
+            this.txtPassword.Location = new System.Drawing.Point(200, 152);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(255, 36);
@@ -249,6 +253,16 @@
             this.kryptonLabel2.TabIndex = 6;
             this.kryptonLabel2.Values.Text = "Usuario";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaDeUniversidad.Properties.Resources.ojo_cerrado;
+            this.pictureBox1.Location = new System.Drawing.Point(464, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,6 +297,7 @@
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private CuoreUI.Controls.cuiButton btnRegistrarUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
