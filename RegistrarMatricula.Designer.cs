@@ -42,10 +42,12 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel1.Location = new System.Drawing.Point(209, 149);
+            this.kryptonLabel1.AutoSize = false;
+            this.kryptonLabel1.Location = new System.Drawing.Point(212, 149);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(154, 31);
+            this.kryptonLabel1.Size = new System.Drawing.Size(353, 49);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Codigo del Curso";
             // 
@@ -59,9 +61,9 @@
             this.txtCodigocursoMatri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCodigocursoMatri.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCodigocursoMatri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigocursoMatri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCodigocursoMatri.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigocursoMatri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigocursoMatri.Location = new System.Drawing.Point(363, 149);
+            this.txtCodigocursoMatri.Location = new System.Drawing.Point(763, 168);
             this.txtCodigocursoMatri.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtCodigocursoMatri.Name = "txtCodigocursoMatri";
             this.txtCodigocursoMatri.PlaceholderText = "";
@@ -80,23 +82,25 @@
             this.txtCedulaEstudiante.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedulaEstudiante.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedulaEstudiante.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedulaEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCedulaEstudiante.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCedulaEstudiante.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedulaEstudiante.Location = new System.Drawing.Point(363, 95);
+            this.txtCedulaEstudiante.Location = new System.Drawing.Point(763, 95);
             this.txtCedulaEstudiante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtCedulaEstudiante.Name = "txtCedulaEstudiante";
             this.txtCedulaEstudiante.PlaceholderText = "";
             this.txtCedulaEstudiante.SelectedText = "";
-            this.txtCedulaEstudiante.Size = new System.Drawing.Size(258, 30);
+            this.txtCedulaEstudiante.Size = new System.Drawing.Size(258, 46);
             this.txtCedulaEstudiante.TabIndex = 3;
             // 
             // kryptonLabel2
             // 
             this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel2.Location = new System.Drawing.Point(180, 94);
+            this.kryptonLabel2.AutoSize = false;
+            this.kryptonLabel2.Location = new System.Drawing.Point(212, 95);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(187, 31);
+            this.kryptonLabel2.Size = new System.Drawing.Size(403, 46);
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 2;
             this.kryptonLabel2.Values.Text = "Cedula De Estudiante";
             // 
@@ -110,9 +114,9 @@
             this.txtNombreCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNombreCurso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNombreCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreCurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreCurso.Location = new System.Drawing.Point(363, 206);
+            this.txtNombreCurso.Location = new System.Drawing.Point(763, 222);
             this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.PlaceholderText = "";
@@ -124,10 +128,12 @@
             // kryptonLabel3
             // 
             this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel3.Location = new System.Drawing.Point(180, 205);
+            this.kryptonLabel3.AutoSize = false;
+            this.kryptonLabel3.Location = new System.Drawing.Point(212, 206);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(177, 31);
+            this.kryptonLabel3.Size = new System.Drawing.Size(357, 46);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 6;
             this.kryptonLabel3.Values.Text = "Nombre del curso";
             // 
@@ -142,9 +148,9 @@
             this.txtPrecioCurso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPrecioCurso.Enabled = false;
             this.txtPrecioCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecioCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrecioCurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecioCurso.Location = new System.Drawing.Point(363, 260);
+            this.txtPrecioCurso.Location = new System.Drawing.Point(763, 288);
             this.txtPrecioCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPrecioCurso.Name = "txtPrecioCurso";
             this.txtPrecioCurso.PlaceholderText = "";
@@ -156,24 +162,28 @@
             // kryptonLabel4
             // 
             this.kryptonLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel4.Location = new System.Drawing.Point(209, 260);
+            this.kryptonLabel4.AutoSize = false;
+            this.kryptonLabel4.Location = new System.Drawing.Point(212, 260);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(146, 31);
+            this.kryptonLabel4.Size = new System.Drawing.Size(305, 58);
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 4;
             this.kryptonLabel4.Values.Text = "Precio Curso";
             // 
             // btnMatricularcurso
             // 
             this.btnMatricularcurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMatricularcurso.Animated = true;
+            this.btnMatricularcurso.AutoRoundedCorners = true;
             this.btnMatricularcurso.BackColor = System.Drawing.Color.Transparent;
             this.btnMatricularcurso.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMatricularcurso.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMatricularcurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMatricularcurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMatricularcurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMatricularcurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMatricularcurso.ForeColor = System.Drawing.Color.White;
-            this.btnMatricularcurso.Location = new System.Drawing.Point(418, 312);
+            this.btnMatricularcurso.Location = new System.Drawing.Point(791, 391);
             this.btnMatricularcurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMatricularcurso.Name = "btnMatricularcurso";
             this.btnMatricularcurso.Size = new System.Drawing.Size(202, 56);
@@ -196,10 +206,9 @@
             this.Controls.Add(this.kryptonLabel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegistrarMatricula";
-            this.Size = new System.Drawing.Size(1070, 624);
+            this.Size = new System.Drawing.Size(1871, 625);
             this.Load += new System.EventHandler(this.RegistrarMatricula_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

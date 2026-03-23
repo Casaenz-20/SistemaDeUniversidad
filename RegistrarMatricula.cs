@@ -74,8 +74,8 @@ namespace SistemaDeUniversidad
             {
                 ["CedulaEstudiante"] = txtCedulaEstudiante.Text,
                 ["CodigoCurso"] = txtCodigocursoMatri.Text,
-                ["NombreCurso"] = txtNombreCurso.Text, // Corregido: quité el espacio inicial " NombreCurso"
-                ["PrecioCurso"] = precio
+                ["NombreCurso"] = txtNombreCurso.Text, 
+                ["PrecioCurso"] = txtPrecioCurso.Text
             };
 
             try
@@ -117,7 +117,13 @@ namespace SistemaDeUniversidad
 
         private void txtCodigocursoMatri_TextChanged(object sender, EventArgs e)
         {
-
+            var filtro = txtCodigocursoMatri.Text;
+            var cursoFiltro = Cursos.Where(c => c["Codigo"]?.ToString().Contains(filtro) == true).ToList();
+            foreach (var Cursos in cursoFiltro)
+            {
+                txtNombreCurso.Text = (string)Cursos["Nombre"];
+                txtPrecioCurso.Text = (string)Cursos["Precio"];
+            }
         }
     }
 }
