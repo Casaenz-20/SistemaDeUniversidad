@@ -99,12 +99,20 @@ namespace SistemaDeUniversidad
 
                 MessageBox.Show("Matrícula guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // LimpiarCampos(); 
+                LimpiarCampos(); 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al procesar la matrícula: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtCedulaEstudiante.Text = "";
+            txtCodigocursoMatri.Text = "";
+            txtNombreCurso.Text = "";
+            txtPrecioCurso.Text = "";
         }
 
         private void txtCodigocursoMatri_TextChanged(object sender, EventArgs e)
