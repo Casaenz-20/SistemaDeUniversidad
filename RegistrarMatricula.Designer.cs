@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCodigocursoMatri = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCedulaEstudiante = new Guna.UI2.WinForms.Guna2TextBox();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.txtNombreCurso = new Guna.UI2.WinForms.Guna2TextBox();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.txtPrecioCurso = new Guna.UI2.WinForms.Guna2TextBox();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.SuspendLayout();
             // 
             // kryptonLabel1
@@ -40,33 +46,121 @@
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Codigo del Curso";
             // 
-            // guna2TextBox1
+            // txtCodigocursoMatri
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(323, 119);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(229, 24);
-            this.guna2TextBox1.TabIndex = 1;
+            this.txtCodigocursoMatri.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigocursoMatri.DefaultText = "";
+            this.txtCodigocursoMatri.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigocursoMatri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigocursoMatri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigocursoMatri.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigocursoMatri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigocursoMatri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCodigocursoMatri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigocursoMatri.Location = new System.Drawing.Point(323, 119);
+            this.txtCodigocursoMatri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigocursoMatri.Name = "txtCodigocursoMatri";
+            this.txtCodigocursoMatri.PlaceholderText = "";
+            this.txtCodigocursoMatri.SelectedText = "";
+            this.txtCodigocursoMatri.Size = new System.Drawing.Size(229, 24);
+            this.txtCodigocursoMatri.TabIndex = 1;
+            // 
+            // txtCedulaEstudiante
+            // 
+            this.txtCedulaEstudiante.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedulaEstudiante.DefaultText = "";
+            this.txtCedulaEstudiante.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCedulaEstudiante.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCedulaEstudiante.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedulaEstudiante.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedulaEstudiante.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedulaEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCedulaEstudiante.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedulaEstudiante.Location = new System.Drawing.Point(323, 76);
+            this.txtCedulaEstudiante.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCedulaEstudiante.Name = "txtCedulaEstudiante";
+            this.txtCedulaEstudiante.PlaceholderText = "";
+            this.txtCedulaEstudiante.SelectedText = "";
+            this.txtCedulaEstudiante.Size = new System.Drawing.Size(229, 24);
+            this.txtCedulaEstudiante.TabIndex = 3;
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(160, 75);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(157, 25);
+            this.kryptonLabel2.TabIndex = 2;
+            this.kryptonLabel2.Values.Text = "Cedula De Estudiante";
+            // 
+            // txtNombreCurso
+            // 
+            this.txtNombreCurso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreCurso.DefaultText = "";
+            this.txtNombreCurso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreCurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreCurso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreCurso.Location = new System.Drawing.Point(323, 165);
+            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreCurso.Name = "txtNombreCurso";
+            this.txtNombreCurso.PlaceholderText = "";
+            this.txtNombreCurso.SelectedText = "";
+            this.txtNombreCurso.Size = new System.Drawing.Size(229, 24);
+            this.txtNombreCurso.TabIndex = 7;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(160, 164);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(157, 25);
+            this.kryptonLabel3.TabIndex = 6;
+            this.kryptonLabel3.Values.Text = "Nombre del curso";
+            // 
+            // txtPrecioCurso
+            // 
+            this.txtPrecioCurso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrecioCurso.DefaultText = "";
+            this.txtPrecioCurso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrecioCurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrecioCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecioCurso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecioCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrecioCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrecioCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrecioCurso.Location = new System.Drawing.Point(323, 208);
+            this.txtPrecioCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecioCurso.Name = "txtPrecioCurso";
+            this.txtPrecioCurso.PlaceholderText = "";
+            this.txtPrecioCurso.SelectedText = "";
+            this.txtPrecioCurso.Size = new System.Drawing.Size(229, 24);
+            this.txtPrecioCurso.TabIndex = 5;
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(186, 208);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(130, 25);
+            this.kryptonLabel4.TabIndex = 4;
+            this.kryptonLabel4.Values.Text = "Precio Curso";
             // 
             // RegistrarMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtNombreCurso);
+            this.Controls.Add(this.kryptonLabel3);
+            this.Controls.Add(this.txtPrecioCurso);
+            this.Controls.Add(this.kryptonLabel4);
+            this.Controls.Add(this.txtCedulaEstudiante);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.txtCodigocursoMatri);
             this.Controls.Add(this.kryptonLabel1);
             this.Name = "RegistrarMatricula";
             this.Size = new System.Drawing.Size(951, 499);
+            this.Load += new System.EventHandler(this.RegistrarMatricula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,6 +169,12 @@
         #endregion
 
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCodigocursoMatri;
+        private Guna.UI2.WinForms.Guna2TextBox txtCedulaEstudiante;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreCurso;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrecioCurso;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
     }
 }
