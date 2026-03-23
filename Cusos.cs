@@ -55,12 +55,11 @@ namespace SistemaDeUniversidad
 
         private void btnGuardarCurso_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombreCurso.Text) || string.IsNullOrWhiteSpace(txtCodigoCurso.Text) || string.IsNullOrWhiteSpace(txtPrecio.Text) || cboResinto.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtNombreCurso.Text) || string.IsNullOrWhiteSpace(txtCodigoCurso.Text) || string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
                 errorProvider1.SetError(txtNombreCurso, "Por favor, ingrese el nombre del curso.");
                 errorProvider1.SetError(txtCodigoCurso, "Por favor, ingrese el código del curso.");
                 errorProvider1.SetError(txtPrecio, "Por favor, ingrese el precio del curso.");
-                errorProvider1.SetError(cboResinto, "Por favor, seleccione el recinto del curso.");
             }
             else
             {
@@ -76,7 +75,6 @@ namespace SistemaDeUniversidad
                         ["Nombre"] = txtNombreCurso.Text,
                         ["Codigo"] = txtCodigoCurso.Text,
                         ["Precio"] = txtPrecio.Text,
-                        ["Recinto"] = cboResinto.SelectedItem.ToString()
 
                     };
                     cursos.Add(nuevoCurso);
@@ -93,7 +91,7 @@ namespace SistemaDeUniversidad
             datagCursos.Rows.Clear();
             foreach(var nuevoCurso in cursos)
             {
-                datagCursos.Rows.Add(nuevoCurso["Codigo"], nuevoCurso["Nombre"], nuevoCurso["Precio"], nuevoCurso["Recinto"]);
+                datagCursos.Rows.Add(nuevoCurso["Codigo"], nuevoCurso["Nombre"], nuevoCurso["Precio"]);
             }
         }
 
@@ -117,7 +115,7 @@ namespace SistemaDeUniversidad
             datagCursos.Rows.Clear();
             foreach (var curso in cursosFiltrados)
             {
-                datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
+                datagCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"]);
             }
         }
 
@@ -134,8 +132,6 @@ namespace SistemaDeUniversidad
                     txtNombreCurso.Text = Convert.ToString(filaSeleccionada.Cells[1].Value);
                     txtPrecio.Text = Convert.ToString(filaSeleccionada.Cells[2].Value);
 
-                    string recinto = Convert.ToString(filaSeleccionada.Cells[3].Value);
-                    cboResinto.Text = recinto;
                 }
             }
             catch (Exception ex)
@@ -199,7 +195,6 @@ namespace SistemaDeUniversidad
                 ["Codigo"] = datagCursos.SelectedRows[0].Cells[0].Value.ToString(),
                 ["Nombre"] = datagCursos.SelectedRows[0].Cells[1].Value.ToString(),
                 ["Precio"] = datagCursos.SelectedRows[0].Cells[2].Value.ToString(),
-                ["Resinto"] = datagCursos.SelectedRows[0].Cells[3].Value.ToString()
             }, datagCursos);
             modificarCursos.ShowDialog();
                 
@@ -211,7 +206,7 @@ namespace SistemaDeUniversidad
             dataCursos.Rows.Clear();
             foreach (var curso in cursos)
             {
-                dataCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"], curso["Recinto"]);
+                dataCursos.Rows.Add(curso["Codigo"], curso["Nombre"], curso["Precio"]);
             }
         }
     }

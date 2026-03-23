@@ -31,7 +31,7 @@ namespace SistemaDeUniversidad
             txtCodigoMF.Text = (string)ListaCursos["Codigo"];
             txtNombreMF.Text = (string)ListaCursos["Nombre"];
             txtPrecioMF.Text = (string)ListaCursos["Precio"];
-            cboRecintoMF.Text = (string)ListaCursos["Recinto"];
+           
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -46,7 +46,6 @@ namespace SistemaDeUniversidad
                     Curso_Encontrado["Codigo"] = txtCodigoMF.Text;
                     Curso_Encontrado["Nombre"] = txtNombreMF.Text;
                     Curso_Encontrado["Precio"] = txtPrecioMF.Text;
-                    Curso_Encontrado["Recinto"] = cboRecintoMF.Text;
                     GuardarCambioCursosJSON(Settings.Default.ListCursos);
                     Cusos.ImprimirListaCursos(dataCursos, Cusos.cursos);
                     this.Close();

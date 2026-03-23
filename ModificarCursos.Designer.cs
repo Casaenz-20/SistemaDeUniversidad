@@ -34,9 +34,7 @@
             this.txtNombreMF = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPrecioMF = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnModificar = new CuoreUI.Controls.cuiButton();
-            this.cboRecintoMF = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCodigoMF
@@ -50,21 +48,22 @@
             this.txtCodigoMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigoMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigoMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoMF.Location = new System.Drawing.Point(200, 89);
-            this.txtCodigoMF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodigoMF.Location = new System.Drawing.Point(267, 110);
+            this.txtCodigoMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtCodigoMF.Name = "txtCodigoMF";
             this.txtCodigoMF.PlaceholderText = "";
             this.txtCodigoMF.SelectedText = "";
-            this.txtCodigoMF.Size = new System.Drawing.Size(286, 30);
+            this.txtCodigoMF.Size = new System.Drawing.Size(381, 37);
             this.txtCodigoMF.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(105, 89);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(140, 110);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(79, 27);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Codigo:";
             // 
@@ -72,9 +71,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(531, 89);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(708, 110);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(104, 31);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(85, 27);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Nombre:";
             // 
@@ -89,21 +89,22 @@
             this.txtNombreMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombreMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreMF.Location = new System.Drawing.Point(642, 89);
-            this.txtNombreMF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreMF.Location = new System.Drawing.Point(856, 110);
+            this.txtNombreMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtNombreMF.Name = "txtNombreMF";
             this.txtNombreMF.PlaceholderText = "";
             this.txtNombreMF.SelectedText = "";
-            this.txtNombreMF.Size = new System.Drawing.Size(286, 30);
+            this.txtNombreMF.Size = new System.Drawing.Size(381, 37);
             this.txtNombreMF.TabIndex = 3;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(105, 173);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(512, 223);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(86, 31);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(71, 27);
             this.guna2HtmlLabel3.TabIndex = 4;
             this.guna2HtmlLabel3.Text = "Precio:";
             // 
@@ -118,23 +119,13 @@
             this.txtPrecioMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecioMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecioMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecioMF.Location = new System.Drawing.Point(200, 173);
-            this.txtPrecioMF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecioMF.Location = new System.Drawing.Point(649, 213);
+            this.txtPrecioMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPrecioMF.Name = "txtPrecioMF";
             this.txtPrecioMF.PlaceholderText = "";
             this.txtPrecioMF.SelectedText = "";
-            this.txtPrecioMF.Size = new System.Drawing.Size(286, 30);
+            this.txtPrecioMF.Size = new System.Drawing.Size(381, 37);
             this.txtPrecioMF.TabIndex = 5;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(540, 172);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(99, 31);
-            this.guna2HtmlLabel4.TabIndex = 6;
-            this.guna2HtmlLabel4.Text = "Recinto:";
             // 
             // btnModificar
             // 
@@ -155,57 +146,40 @@
             this.btnModificar.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.Image = null;
             this.btnModificar.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnModificar.Location = new System.Drawing.Point(105, 237);
+            this.btnModificar.Location = new System.Drawing.Point(140, 292);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.NormalBackground = System.Drawing.Color.White;
             this.btnModificar.NormalForeColor = System.Drawing.Color.Black;
             this.btnModificar.NormalImageTint = System.Drawing.Color.Black;
             this.btnModificar.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.OutlineThickness = 1F;
-            this.btnModificar.Padding = new System.Windows.Forms.Padding(12);
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(16, 15, 16, 15);
             this.btnModificar.PressedBackground = System.Drawing.Color.WhiteSmoke;
             this.btnModificar.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnModificar.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnModificar.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnModificar.Size = new System.Drawing.Size(823, 45);
+            this.btnModificar.Size = new System.Drawing.Size(1097, 55);
             this.btnModificar.TabIndex = 8;
             this.btnModificar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnModificar.TextPadding = 12;
+            this.btnModificar.TextPadding = -1;
             this.btnModificar.TextSpacing = 2;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // cboRecintoMF
-            // 
-            this.cboRecintoMF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRecintoMF.FormattingEnabled = true;
-            this.cboRecintoMF.Items.AddRange(new object[] {
-            "San José",
-            "Alajuela",
-            "Cartago",
-            "Heredia",
-            "Guanacaste",
-            "Puntarenas",
-            "Limón"});
-            this.cboRecintoMF.Location = new System.Drawing.Point(645, 166);
-            this.cboRecintoMF.Name = "cboRecintoMF";
-            this.cboRecintoMF.Size = new System.Drawing.Size(218, 37);
-            this.cboRecintoMF.TabIndex = 9;
-            // 
             // ModificarCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 421);
-            this.Controls.Add(this.cboRecintoMF);
+            this.ClientSize = new System.Drawing.Size(1688, 518);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtPrecioMF);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.txtNombreMF);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.txtCodigoMF);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModificarCursos";
             this.Text = "ModificarCursos";
             this.Load += new System.EventHandler(this.ModificarCursos_Load);
@@ -222,8 +196,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNombreMF;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecioMF;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private CuoreUI.Controls.cuiButton btnModificar;
-        private System.Windows.Forms.ComboBox cboRecintoMF;
     }
 }

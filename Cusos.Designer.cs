@@ -40,14 +40,11 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cboResinto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnGuardarCurso = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Recinto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).BeginInit();
             this.tripMenuCursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -63,18 +60,17 @@
             this.datagCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Precio,
-            this.Recinto});
+            this.Precio});
             this.datagCursos.ContextMenuStrip = this.tripMenuCursos;
-            this.datagCursos.Location = new System.Drawing.Point(0, 239);
-            this.datagCursos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datagCursos.Location = new System.Drawing.Point(0, 294);
+            this.datagCursos.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.datagCursos.MultiSelect = false;
             this.datagCursos.Name = "datagCursos";
             this.datagCursos.RowHeadersVisible = false;
             this.datagCursos.RowHeadersWidth = 62;
             this.datagCursos.RowTemplate.Height = 28;
             this.datagCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagCursos.Size = new System.Drawing.Size(879, 313);
+            this.datagCursos.Size = new System.Drawing.Size(1172, 385);
             this.datagCursos.TabIndex = 0;
             this.datagCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagCursos_CellClick);
             // 
@@ -86,19 +82,19 @@
             this.eliminarToolStripMenuItem,
             this.modificarToolStripMenuItem});
             this.tripMenuCursos.Name = "tripMenuCursos";
-            this.tripMenuCursos.Size = new System.Drawing.Size(160, 68);
+            this.tripMenuCursos.Size = new System.Drawing.Size(143, 52);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(159, 32);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -108,10 +104,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel1.AutoSize = false;
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(291, 10);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.kryptonLabel1.Location = new System.Drawing.Point(388, 12);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(280, 62);
+            this.kryptonLabel1.Size = new System.Drawing.Size(373, 76);
             this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 1;
@@ -122,10 +118,10 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(100, 90);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(133, 111);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(73, 34);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(97, 42);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Codigo";
             // 
@@ -140,12 +136,12 @@
             this.txtCodigoCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigoCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigoCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoCurso.Location = new System.Drawing.Point(190, 92);
-            this.txtCodigoCurso.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCodigoCurso.Location = new System.Drawing.Point(253, 113);
+            this.txtCodigoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoCurso.Name = "txtCodigoCurso";
             this.txtCodigoCurso.PlaceholderText = "";
             this.txtCodigoCurso.SelectedText = "";
-            this.txtCodigoCurso.Size = new System.Drawing.Size(172, 19);
+            this.txtCodigoCurso.Size = new System.Drawing.Size(229, 23);
             this.txtCodigoCurso.TabIndex = 3;
             this.txtCodigoCurso.TextChanged += new System.EventHandler(this.txtCodigoCurso_TextChanged);
             // 
@@ -160,12 +156,12 @@
             this.txtNombreCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombreCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreCurso.Location = new System.Drawing.Point(580, 79);
-            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNombreCurso.Location = new System.Drawing.Point(693, 113);
+            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.PlaceholderText = "";
             this.txtNombreCurso.SelectedText = "";
-            this.txtNombreCurso.Size = new System.Drawing.Size(183, 33);
+            this.txtNombreCurso.Size = new System.Drawing.Size(244, 41);
             this.txtNombreCurso.TabIndex = 5;
             // 
             // guna2HtmlLabel2
@@ -173,10 +169,10 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(389, 82);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(522, 128);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(171, 30);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(228, 37);
             this.guna2HtmlLabel2.TabIndex = 4;
             this.guna2HtmlLabel2.Text = "Nombre del Curso";
             // 
@@ -191,12 +187,12 @@
             this.txtPrecio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecio.Location = new System.Drawing.Point(190, 130);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPrecio.Location = new System.Drawing.Point(253, 160);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PlaceholderText = "";
             this.txtPrecio.SelectedText = "";
-            this.txtPrecio.Size = new System.Drawing.Size(172, 19);
+            this.txtPrecio.Size = new System.Drawing.Size(229, 23);
             this.txtPrecio.TabIndex = 7;
             // 
             // guna2HtmlLabel3
@@ -204,48 +200,12 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(100, 129);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(133, 159);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(64, 34);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(85, 42);
             this.guna2HtmlLabel3.TabIndex = 6;
             this.guna2HtmlLabel3.Text = "Precio";
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.AutoSize = false;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(405, 130);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(93, 33);
-            this.guna2HtmlLabel4.TabIndex = 8;
-            this.guna2HtmlLabel4.Text = "Recinto";
-            // 
-            // cboResinto
-            // 
-            this.cboResinto.BackColor = System.Drawing.Color.Transparent;
-            this.cboResinto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboResinto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboResinto.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboResinto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboResinto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboResinto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboResinto.ItemHeight = 30;
-            this.cboResinto.Items.AddRange(new object[] {
-            "San José",
-            "Alajuela",
-            "Cartago",
-            "Heredia",
-            "Guanacaste",
-            "Puntarenas",
-            "Limón"});
-            this.cboResinto.Location = new System.Drawing.Point(492, 130);
-            this.cboResinto.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cboResinto.Name = "cboResinto";
-            this.cboResinto.Size = new System.Drawing.Size(184, 36);
-            this.cboResinto.TabIndex = 9;
             // 
             // btnGuardarCurso
             // 
@@ -255,10 +215,10 @@
             this.btnGuardarCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGuardarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnGuardarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCurso.Location = new System.Drawing.Point(363, 169);
-            this.btnGuardarCurso.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnGuardarCurso.Location = new System.Drawing.Point(484, 208);
+            this.btnGuardarCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardarCurso.Name = "btnGuardarCurso";
-            this.btnGuardarCurso.Size = new System.Drawing.Size(135, 36);
+            this.btnGuardarCurso.Size = new System.Drawing.Size(180, 44);
             this.btnGuardarCurso.TabIndex = 10;
             this.btnGuardarCurso.Text = "Guardar Curso";
             this.btnGuardarCurso.Click += new System.EventHandler(this.btnGuardarCurso_Click);
@@ -288,21 +248,12 @@
             this.Precio.MinimumWidth = 8;
             this.Precio.Name = "Precio";
             // 
-            // Recinto
-            // 
-            this.Recinto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Recinto.HeaderText = "Resinto";
-            this.Recinto.MinimumWidth = 6;
-            this.Recinto.Name = "Recinto";
-            // 
             // Cusos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnGuardarCurso);
-            this.Controls.Add(this.cboResinto);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.txtNombreCurso);
@@ -311,9 +262,9 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.datagCursos);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "Cusos";
-            this.Size = new System.Drawing.Size(883, 551);
+            this.Size = new System.Drawing.Size(1177, 678);
             this.Load += new System.EventHandler(this.Cusos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagCursos)).EndInit();
             this.tripMenuCursos.ResumeLayout(false);
@@ -332,8 +283,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecio;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2ComboBox cboResinto;
         private Guna.UI2.WinForms.Guna2Button btnGuardarCurso;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ContextMenuStrip tripMenuCursos;
@@ -342,6 +291,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Recinto;
     }
 }
