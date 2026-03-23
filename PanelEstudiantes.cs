@@ -53,7 +53,9 @@ namespace SistemaDeUniversidad
 
         private void btnRegistrMatricula_Click(object sender, EventArgs e)
         {
-
+            RegistroCursos cursosRegistrados = new RegistroCursos();
+            ContenedorEstudiantes.Controls.Clear();
+            ContenedorEstudiantes.Controls.Add(cursosRegistrados);
         }
     }
 }
