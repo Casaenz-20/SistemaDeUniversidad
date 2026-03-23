@@ -97,7 +97,7 @@ namespace SistemaDeUniversidad
             this.iconButton1.Location = new System.Drawing.Point(14, 580);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(291, 44);
+            this.iconButton1.Size = new System.Drawing.Size(370, 44);
             this.iconButton1.TabIndex = 2;
             this.iconButton1.Text = "Cerrar Seccion";
             this.iconButton1.UseVisualStyleBackColor = true;

@@ -75,7 +75,7 @@ namespace SistemaDeUniversidad
 
             if (ExisteCorreo(txtCorreoEstudiante.Text))
             {
-                string CodigoVerificasio = GenerarCodigo();
+                CodigoGenerado = GenerarCodigo();
                 string Correouser = txtCorreoEstudiante.Text;
 
                 // Buscamos ignorando mayúsculas/minúsculas
@@ -91,7 +91,7 @@ namespace SistemaDeUniversidad
                     correo.From = new MailAddress(miCorreo, "Sistema Universitario"); // Nombre que verá el usuario
                     correo.To.Add(Correouser);
                     correo.Subject = "Codigo de Verificacion";
-                    correo.Body = $"Hola,\n\nHas solicitado un codigo para cambiar tu contraseña.\nTu codigó de verificacion es: {CodigoVerificasio}\n\nSi no fue no lo solicito por favao conumicarse con la institucion.";
+                    correo.Body = $"Hola,\n\nHas solicitado un codigo para cambiar tu contraseña.\nTu codigó de verificacion es: {CodigoGenerado}\n\nSi no fue no lo solicito por favao conumicarse con la institucion.";
                     correo.IsBodyHtml = false;
 
                     SmtpClient clienteSmtp = new SmtpClient("smtp.gmail.com")
@@ -139,6 +139,7 @@ namespace SistemaDeUniversidad
             for (int i = 0; i < longitud; i++)
             {
                  codigo+= random.Next(0, 10).ToString();
+                 
                 
                
             }
@@ -147,19 +148,27 @@ namespace SistemaDeUniversidad
 
         private void btnConfirmCode_Click(object sender, EventArgs e)
         {
-            if (CodigoCoinside(txtCodigodeVerificacion))
+            if (CodigoCoinside(txtCodigodeVerificacion.Text))
             {
-
+                GuardarNuevaContra(Settings.Default.ListUser);
+                MessageBox.Show("Código Confirmado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Codigo no Coinside","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-
-
-        private bool CodigoCoinside(cuiOTPasswordBox txtCodigodeVerificacion)
+        private void GuardarNuevaContra(string listUser)
         {
-            string codigoAComparar = GenerarCodigo();
-            bool coinsideCode = txtCodigodeVerificacion == codigoAComparar;
-            return coinsideCode;
+            File.WriteAllText(listUser,JsonConvert.DeserializeObject())
         }
+
+        private bool CodigoCoinside(string text)
+        {
+            return txtCodigodeVerificacion.Text == CodigoGenerado;
+        }
+
+        
     }
 }
