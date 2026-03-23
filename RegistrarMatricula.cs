@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Bogus;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SistemaDeUniversidad.Properties;
 using System;
@@ -57,6 +58,7 @@ namespace SistemaDeUniversidad
 
         private void btnMatricularcurso_Click(object sender, EventArgs e)
         {
+            var f = new Faker("es");
             if (string.IsNullOrWhiteSpace(txtCedulaEstudiante.Text) || string.IsNullOrWhiteSpace(txtCodigocursoMatri.Text))
             {
                 MessageBox.Show("Por favor, complete los campos necesarios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -75,7 +77,8 @@ namespace SistemaDeUniversidad
                 ["CedulaEstudiante"] = txtCedulaEstudiante.Text,
                 ["CodigoCurso"] = txtCodigocursoMatri.Text,
                 ["NombreCurso"] = txtNombreCurso.Text, 
-                ["PrecioCurso"] = txtPrecioCurso.Text
+                ["PrecioCurso"] = txtPrecioCurso.Text,
+                ["CodigoMatricula"] = f.Random.Replace("CUR-###").ToUpper(),
             };
 
             try
