@@ -57,44 +57,53 @@ namespace SistemaDeUniversidad
 
         private void btnMatricularcurso_Click(object sender, EventArgs e)
         {
-            // 1. Validar que los campos tengan información
             if (string.IsNullOrWhiteSpace(txtCedulaEstudiante.Text) || string.IsNullOrWhiteSpace(txtCodigocursoMatri.Text))
             {
-                MessageBox.Show("Por favor, complete los campos de Cédula y Código de Curso.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, complete los campos necesarios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Crear el objeto con los datos de los TexBox
+            if (!decimal.TryParse(txtPrecioCurso.Text, out decimal precio))
+            {
+                MessageBox.Show("El precio del curso no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 2. Crear el objeto JObject
             JObject nuevaMatricula = new JObject
             {
                 ["CedulaEstudiante"] = txtCedulaEstudiante.Text,
                 ["CodigoCurso"] = txtCodigocursoMatri.Text,
-                [" NombreCurso"] = txtNombreCurso.Text,
-                ["PrecioCurso"] = decimal.Parse(txtPrecioCurso.Text) // Asegúrate que sea un número válido
+                ["NombreCurso"] = txtNombreCurso.Text, // Corregido: quité el espacio inicial " NombreCurso"
+                ["PrecioCurso"] = precio
             };
 
             try
             {
-                // 3. Leer lista actual del archivo JSON
                 string rutaArchivo = Settings.Default.ListMatricula;
+                List<JObject> listaMatriculas = new List<JObject>();
 
-                //if (File.Exists(rutaArchivo))
-                //{
-                //    string jsonExistente = File.ReadAllText(rutaArchivo);
-                //    listaMatriculas = JsonConvert.DeserializeObject<List<Matricula>>(jsonExistente) ?? new List<Matricula>();
-                //}
+                // 3. Leer si el archivo existe
+                if (File.Exists(rutaArchivo))
+                {
+                    string jsonExistente = File.ReadAllText(rutaArchivo);
+                    // Si el archivo está vacío, evitamos el error con ??
+                    listaMatriculas = JsonConvert.DeserializeObject<List<JObject>>(jsonExistente) ?? new List<JObject>();
+                }
 
-                // 4. Agregar la nueva matrícula y guardar
-                Matricula.Add(nuevaMatricula);
+                // 4. Agregar y GUARDAR (Paso vital)
+                listaMatriculas.Add(nuevaMatricula);
+
+                string jsonActualizado = JsonConvert.SerializeObject(listaMatriculas, Formatting.Indented);
+                File.WriteAllText(rutaArchivo, jsonActualizado);
 
                 MessageBox.Show("Matrícula guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Opcional: Limpiar campos después de guardar
-                //LimpiarCampos();
+                // LimpiarCampos(); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar: " + ex.Message);
+                MessageBox.Show("Error al procesar la matrícula: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

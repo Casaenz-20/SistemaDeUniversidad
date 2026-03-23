@@ -116,6 +116,7 @@
             this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.PlaceholderText = "";
+            this.txtNombreCurso.ReadOnly = true;
             this.txtNombreCurso.SelectedText = "";
             this.txtNombreCurso.Size = new System.Drawing.Size(258, 30);
             this.txtNombreCurso.TabIndex = 7;
@@ -139,6 +140,7 @@
             this.txtPrecioCurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPrecioCurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPrecioCurso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecioCurso.Enabled = false;
             this.txtPrecioCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecioCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecioCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -146,6 +148,7 @@
             this.txtPrecioCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPrecioCurso.Name = "txtPrecioCurso";
             this.txtPrecioCurso.PlaceholderText = "";
+            this.txtPrecioCurso.ReadOnly = true;
             this.txtPrecioCurso.SelectedText = "";
             this.txtPrecioCurso.Size = new System.Drawing.Size(258, 30);
             this.txtPrecioCurso.TabIndex = 5;
