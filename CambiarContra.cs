@@ -50,7 +50,39 @@ namespace SistemaDeUniversidad
             if (String.IsNullOrWhiteSpace(txtNombreEstudiante.Text))
             {
                 errorProvider1.SetError(txtNombreEstudiante, "Este campo no debe de estar vacio");
+
             }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (String.IsNullOrWhiteSpace(txtNewPassword.Text))
+            {
+                errorProvider1.SetError(txtNombreEstudiante, "Este campo no debe de estar vacio");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+
+
+            if (ExisteUsuario(txtCedulaEstudiante.Text))
+            {
+                string CodigoVerificasio = GenerarCodigo();
+
+            }
+            else
+            {
+                MessageBox.Show($"La Cedula {txtCedulaEstudiante.Text} No existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool ExisteUsuario(string text)
+        {
+            bool existeUser = usuarios.Any(u => u["Cedula"].ToString() == txtCedulaEstudiante.Text);
+            return existeUser;
         }
 
         public static string GenerarCodigo(int longitud = 6)
