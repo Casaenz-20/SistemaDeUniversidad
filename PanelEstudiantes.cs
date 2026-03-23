@@ -50,5 +50,10 @@ namespace SistemaDeUniversidad
             ContenedorEstudiantes.Controls.Clear();
             ContenedorEstudiantes.Controls.Add(registro);
         }
+
+        private void btnRegistrMatricula_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

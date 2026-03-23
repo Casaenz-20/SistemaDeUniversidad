@@ -167,6 +167,12 @@
     <Compile Include="RegistrarUsuarios.Designer.cs">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroCursos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegistroCursos.Designer.cs">
+      <DependentUpon>RegistroCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerCursosDisponibles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarUsuarios.resx">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroCursos.resx">
+      <DependentUpon>RegistroCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerCursosDisponibles.resx">
       <DependentUpon>VerCursosDisponibles.cs</DependentUpon>

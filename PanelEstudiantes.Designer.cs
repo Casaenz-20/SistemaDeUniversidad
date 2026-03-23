@@ -115,6 +115,7 @@ namespace SistemaDeUniversidad
             this.btnRegistrMatricula.TabIndex = 1;
             this.btnRegistrMatricula.Text = "Registro de Matricula";
             this.btnRegistrMatricula.UseVisualStyleBackColor = true;
+            this.btnRegistrMatricula.Click += new System.EventHandler(this.btnRegistrMatricula_Click);
             // 
             // btnMatricular
             // 
