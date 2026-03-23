@@ -43,5 +43,10 @@ namespace SistemaDeUniversidad
             ContenedorEstudiantes.Controls.Add(con);
             
         }
+
+        private void btnMatricular_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

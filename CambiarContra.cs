@@ -150,18 +150,43 @@ namespace SistemaDeUniversidad
         {
             if (CodigoCoinside(txtCodigodeVerificacion.Text))
             {
-                GuardarNuevaContra(Settings.Default.ListUser);
-                MessageBox.Show("Código Confirmado", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+                try
+                {
+                    GuardarNuevaContra(Settings.Default.ListUser);
+                    MessageBox.Show("Contraseña actualizada con éxito.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Codigo no Coinside","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El código no coincide.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void GuardarNuevaContra(string listUser)
         {
-            File.WriteAllText(listUser,JsonConvert.DeserializeObject())
+            string jsonActual = File.ReadAllText(Settings.Default.ListCursos);
+            List<JObject> listaUsuarios = JsonConvert.DeserializeObject<List<JObject>>(jsonActual);
+
+           
+            var usuario = listaUsuarios.FirstOrDefault(u => u["Usuario"]?.ToString() == txtNombreEstudiante.Text);
+
+            if (usuario != null)
+            {
+                
+                usuario["Contraseña"] = txtNewPassword.Text;
+
+                
+                string nuevoJson = JsonConvert.SerializeObject(listaUsuarios, Formatting.Indented);
+                File.WriteAllText(Settings.Default.ListUser, nuevoJson);
+            }
         }
 
         private bool CodigoCoinside(string text)

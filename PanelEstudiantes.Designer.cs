@@ -128,6 +128,7 @@ namespace SistemaDeUniversidad
             this.btnMatricular.TabIndex = 0;
             this.btnMatricular.Text = "Matrcular Cursos";
             this.btnMatricular.UseVisualStyleBackColor = true;
+            this.btnMatricular.Click += new System.EventHandler(this.btnMatricular_Click);
             // 
             // ContenedorEstudiantes
             // 
