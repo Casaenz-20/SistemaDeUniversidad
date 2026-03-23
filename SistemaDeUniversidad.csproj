@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=35.6.5.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>packages\Bogus.35.6.5\lib\net40\Bogus.dll</HintPath>
+    </Reference>
     <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CuoreUI.Winforms.2026.1.16\lib\net472\CuoreUI.dll</HintPath>
     </Reference>
@@ -101,6 +104,12 @@
     </Compile>
     <Compile Include="AdministrarUsuarios.Designer.cs">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarContra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CambiarContra.Designer.cs">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
     </Compile>
     <Compile Include="Cusos.cs">
       <SubType>UserControl</SubType>
@@ -166,6 +175,9 @@
     </Compile>
     <EmbeddedResource Include="AdministrarUsuarios.resx">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarContra.resx">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cusos.resx">
       <DependentUpon>Cusos.cs</DependentUpon>

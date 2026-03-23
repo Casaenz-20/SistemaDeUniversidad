@@ -80,5 +80,10 @@ namespace SistemaDeUniversidad
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
         }
+
+        private void txtCodigocursoMatri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

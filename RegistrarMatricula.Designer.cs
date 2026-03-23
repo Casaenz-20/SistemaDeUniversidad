@@ -42,9 +42,10 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel1.Location = new System.Drawing.Point(186, 119);
+            this.kryptonLabel1.Location = new System.Drawing.Point(209, 149);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(130, 25);
+            this.kryptonLabel1.Size = new System.Drawing.Size(154, 31);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Codigo del Curso";
             // 
@@ -60,13 +61,14 @@
             this.txtCodigocursoMatri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigocursoMatri.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigocursoMatri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigocursoMatri.Location = new System.Drawing.Point(323, 119);
-            this.txtCodigocursoMatri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigocursoMatri.Location = new System.Drawing.Point(363, 149);
+            this.txtCodigocursoMatri.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtCodigocursoMatri.Name = "txtCodigocursoMatri";
             this.txtCodigocursoMatri.PlaceholderText = "";
             this.txtCodigocursoMatri.SelectedText = "";
-            this.txtCodigocursoMatri.Size = new System.Drawing.Size(229, 24);
+            this.txtCodigocursoMatri.Size = new System.Drawing.Size(258, 30);
             this.txtCodigocursoMatri.TabIndex = 1;
+            this.txtCodigocursoMatri.TextChanged += new System.EventHandler(this.txtCodigocursoMatri_TextChanged);
             // 
             // txtCedulaEstudiante
             // 
@@ -80,20 +82,21 @@
             this.txtCedulaEstudiante.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedulaEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedulaEstudiante.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedulaEstudiante.Location = new System.Drawing.Point(323, 76);
-            this.txtCedulaEstudiante.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCedulaEstudiante.Location = new System.Drawing.Point(363, 95);
+            this.txtCedulaEstudiante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtCedulaEstudiante.Name = "txtCedulaEstudiante";
             this.txtCedulaEstudiante.PlaceholderText = "";
             this.txtCedulaEstudiante.SelectedText = "";
-            this.txtCedulaEstudiante.Size = new System.Drawing.Size(229, 24);
+            this.txtCedulaEstudiante.Size = new System.Drawing.Size(258, 30);
             this.txtCedulaEstudiante.TabIndex = 3;
             // 
             // kryptonLabel2
             // 
             this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel2.Location = new System.Drawing.Point(160, 75);
+            this.kryptonLabel2.Location = new System.Drawing.Point(180, 94);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(157, 25);
+            this.kryptonLabel2.Size = new System.Drawing.Size(187, 31);
             this.kryptonLabel2.TabIndex = 2;
             this.kryptonLabel2.Values.Text = "Cedula De Estudiante";
             // 
@@ -109,20 +112,21 @@
             this.txtNombreCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombreCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreCurso.Location = new System.Drawing.Point(323, 165);
-            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreCurso.Location = new System.Drawing.Point(363, 206);
+            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.PlaceholderText = "";
             this.txtNombreCurso.SelectedText = "";
-            this.txtNombreCurso.Size = new System.Drawing.Size(229, 24);
+            this.txtNombreCurso.Size = new System.Drawing.Size(258, 30);
             this.txtNombreCurso.TabIndex = 7;
             // 
             // kryptonLabel3
             // 
             this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel3.Location = new System.Drawing.Point(160, 164);
+            this.kryptonLabel3.Location = new System.Drawing.Point(180, 205);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(157, 25);
+            this.kryptonLabel3.Size = new System.Drawing.Size(177, 31);
             this.kryptonLabel3.TabIndex = 6;
             this.kryptonLabel3.Values.Text = "Nombre del curso";
             // 
@@ -138,20 +142,21 @@
             this.txtPrecioCurso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecioCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecioCurso.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecioCurso.Location = new System.Drawing.Point(323, 208);
-            this.txtPrecioCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecioCurso.Location = new System.Drawing.Point(363, 260);
+            this.txtPrecioCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPrecioCurso.Name = "txtPrecioCurso";
             this.txtPrecioCurso.PlaceholderText = "";
             this.txtPrecioCurso.SelectedText = "";
-            this.txtPrecioCurso.Size = new System.Drawing.Size(229, 24);
+            this.txtPrecioCurso.Size = new System.Drawing.Size(258, 30);
             this.txtPrecioCurso.TabIndex = 5;
             // 
             // kryptonLabel4
             // 
             this.kryptonLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel4.Location = new System.Drawing.Point(186, 208);
+            this.kryptonLabel4.Location = new System.Drawing.Point(209, 260);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(130, 25);
+            this.kryptonLabel4.Size = new System.Drawing.Size(146, 31);
             this.kryptonLabel4.TabIndex = 4;
             this.kryptonLabel4.Values.Text = "Precio Curso";
             // 
@@ -165,16 +170,17 @@
             this.btnMatricularcurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMatricularcurso.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMatricularcurso.ForeColor = System.Drawing.Color.White;
-            this.btnMatricularcurso.Location = new System.Drawing.Point(372, 250);
+            this.btnMatricularcurso.Location = new System.Drawing.Point(418, 312);
+            this.btnMatricularcurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMatricularcurso.Name = "btnMatricularcurso";
-            this.btnMatricularcurso.Size = new System.Drawing.Size(180, 45);
+            this.btnMatricularcurso.Size = new System.Drawing.Size(202, 56);
             this.btnMatricularcurso.TabIndex = 8;
             this.btnMatricularcurso.Text = "Matricular";
             this.btnMatricularcurso.Click += new System.EventHandler(this.btnMatricularcurso_Click);
             // 
             // RegistrarMatricula
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnMatricularcurso);
             this.Controls.Add(this.txtNombreCurso);
@@ -185,8 +191,9 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.txtCodigocursoMatri);
             this.Controls.Add(this.kryptonLabel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegistrarMatricula";
-            this.Size = new System.Drawing.Size(951, 499);
+            this.Size = new System.Drawing.Size(1070, 624);
             this.Load += new System.EventHandler(this.RegistrarMatricula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

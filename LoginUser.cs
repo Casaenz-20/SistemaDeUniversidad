@@ -109,6 +109,7 @@ namespace SistemaDeUniversidad
                                 PanelEstudiantes userPanel = new PanelEstudiantes();
                                 userPanel.Show();
                                 this.Hide();
+                                
                             }
                         }
                     }
