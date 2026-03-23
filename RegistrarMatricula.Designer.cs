@@ -36,10 +36,12 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.txtPrecioCurso = new Guna.UI2.WinForms.Guna2TextBox();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.btnMatricularcurso = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel1.Location = new System.Drawing.Point(186, 119);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(130, 25);
@@ -48,6 +50,7 @@
             // 
             // txtCodigocursoMatri
             // 
+            this.txtCodigocursoMatri.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodigocursoMatri.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCodigocursoMatri.DefaultText = "";
             this.txtCodigocursoMatri.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -67,6 +70,7 @@
             // 
             // txtCedulaEstudiante
             // 
+            this.txtCedulaEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCedulaEstudiante.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedulaEstudiante.DefaultText = "";
             this.txtCedulaEstudiante.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -86,6 +90,7 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel2.Location = new System.Drawing.Point(160, 75);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(157, 25);
@@ -94,6 +99,7 @@
             // 
             // txtNombreCurso
             // 
+            this.txtNombreCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombreCurso.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombreCurso.DefaultText = "";
             this.txtNombreCurso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -113,6 +119,7 @@
             // 
             // kryptonLabel3
             // 
+            this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel3.Location = new System.Drawing.Point(160, 164);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(157, 25);
@@ -121,6 +128,7 @@
             // 
             // txtPrecioCurso
             // 
+            this.txtPrecioCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrecioCurso.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrecioCurso.DefaultText = "";
             this.txtPrecioCurso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -140,16 +148,35 @@
             // 
             // kryptonLabel4
             // 
+            this.kryptonLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel4.Location = new System.Drawing.Point(186, 208);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(130, 25);
             this.kryptonLabel4.TabIndex = 4;
             this.kryptonLabel4.Values.Text = "Precio Curso";
             // 
+            // btnMatricularcurso
+            // 
+            this.btnMatricularcurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMatricularcurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnMatricularcurso.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMatricularcurso.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMatricularcurso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMatricularcurso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMatricularcurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMatricularcurso.ForeColor = System.Drawing.Color.White;
+            this.btnMatricularcurso.Location = new System.Drawing.Point(372, 250);
+            this.btnMatricularcurso.Name = "btnMatricularcurso";
+            this.btnMatricularcurso.Size = new System.Drawing.Size(180, 45);
+            this.btnMatricularcurso.TabIndex = 8;
+            this.btnMatricularcurso.Text = "Matricular";
+            this.btnMatricularcurso.Click += new System.EventHandler(this.btnMatricularcurso_Click);
+            // 
             // RegistrarMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMatricularcurso);
             this.Controls.Add(this.txtNombreCurso);
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.txtPrecioCurso);
@@ -176,5 +203,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecioCurso;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Guna.UI2.WinForms.Guna2Button btnMatricularcurso;
     }
 }
