@@ -17,6 +17,8 @@ namespace SistemaDeUniversidad
     public partial class RegistrarMatricula : UserControl
     {
         public static List<JObject> Matricula = new List<JObject>();
+        List<JObject> usuarios = new List<JObject>();
+        List <JObject> Cursos = new List<JObject>();
         public RegistrarMatricula()
         {
             InitializeComponent();
@@ -28,6 +30,21 @@ namespace SistemaDeUniversidad
             {
                 CrearArchivo(Settings.Default.ListMatricula);
             }
+
+            usuarios = LeerArchivoUser(Settings.Default.ListUser);
+            Cursos = LeerArchivoCurso(Settings.Default.ListCursos);
+        }
+
+        private List<JObject> LeerArchivoCurso(string listCursos)
+        {
+            string contenido_text_cursos = File.ReadAllText(listCursos);
+            return JsonConvert.DeserializeObject<List<JObject>>(contenido_text_cursos) ?? new List<JObject>();
+        }
+
+        private List<JObject> LeerArchivoUser(string listUser)
+        {
+            string Leer_Archivo = File.ReadAllText(listUser);
+            return JsonConvert.DeserializeObject<List<JObject>>(Leer_Archivo) ?? new List<JObject>();
         }
 
         private void CrearArchivo(string listMatricula)
