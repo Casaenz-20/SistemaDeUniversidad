@@ -38,7 +38,19 @@ namespace SistemaDeUniversidad
 
         private void btnNewPassworld_Click(object sender, EventArgs e)
         {
-            
+            if (String.IsNullOrWhiteSpace(txtCedulaEstudiante.Text))
+            {
+                errorProvider1.SetError(txtCedulaEstudiante, "Este campo no debe de estar vacio");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (String.IsNullOrWhiteSpace(txtNombreEstudiante.Text))
+            {
+                errorProvider1.SetError(txtNombreEstudiante, "Este campo no debe de estar vacio");
+            }
         }
 
         public static string GenerarCodigo(int longitud = 6)

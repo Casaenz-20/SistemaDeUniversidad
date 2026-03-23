@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnNewPassworld = new Guna.UI2.WinForms.Guna2Button();
             this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
@@ -39,6 +40,8 @@
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.cuiOTPasswordBox1 = new CuoreUI.Controls.cuiOTPasswordBox();
             this.btnConfirmCode = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewPassworld
@@ -237,6 +240,10 @@
             this.btnConfirmCode.Text = "Confirmar Codigo";
             this.btnConfirmCode.Visible = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CambiarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -255,6 +262,7 @@
             this.Name = "CambiarContraseña";
             this.Size = new System.Drawing.Size(1479, 1213);
             this.Load += new System.EventHandler(this.CambiarContraseña_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,5 +280,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private CuoreUI.Controls.cuiOTPasswordBox cuiOTPasswordBox1;
         private Guna.UI2.WinForms.Guna2Button btnConfirmCode;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
