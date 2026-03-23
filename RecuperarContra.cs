@@ -69,13 +69,7 @@ namespace SistemaDeUniversidad
             }
             else
             {
-
-                string infoDebug = $"Usuarios cargados: {usuarios.Count}\n";
-                if (usuarios.Count > 0)
-                {
-                    infoDebug += $"Primer correo en lista: '{usuarios[0]["Correo"]}'";
-                }
-                MessageBox.Show(infoDebug + $"\nBuscando: '{correoDestino}'", "Error de Búsqueda");
+                MessageBox.Show("El correo " + txtCorreoRecuperar.Text + " no esta registrado");
             }
         }
         

@@ -23,5 +23,10 @@ namespace SistemaDeUniversidad
             login.Show();
             this.Close();
         }
+
+        private void btnVerCursos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

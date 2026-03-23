@@ -146,11 +146,23 @@
     <Compile Include="RecuperarContra.Designer.cs">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarMatricula.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegistrarMatricula.Designer.cs">
+      <DependentUpon>RegistrarMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrarUsuarios.Designer.cs">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerCursosDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerCursosDisponibles.Designer.cs">
+      <DependentUpon>VerCursosDisponibles.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdministrarUsuarios.resx">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
@@ -186,8 +198,14 @@
     <EmbeddedResource Include="RecuperarContra.resx">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarMatricula.resx">
+      <DependentUpon>RegistrarMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarUsuarios.resx">
       <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerCursosDisponibles.resx">
+      <DependentUpon>VerCursosDisponibles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

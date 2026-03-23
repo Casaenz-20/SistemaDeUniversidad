@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarContra));
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonRichTextBox1 = new Krypton.Toolkit.KryptonRichTextBox();
             this.txtCorreoRecuperar = new Krypton.Toolkit.KryptonTextBox();
@@ -53,8 +54,7 @@
             this.kryptonRichTextBox1.ReadOnly = true;
             this.kryptonRichTextBox1.Size = new System.Drawing.Size(836, 63);
             this.kryptonRichTextBox1.TabIndex = 1;
-            this.kryptonRichTextBox1.Text = "Ingrese un correo eletronico que este vinculado a una cuenta registrada en el sis" +
-    "tema.Se le enviara su contraseña\npor medio de correo eletronico ingresado\n\n";
+            this.kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
             // 
             // txtCorreoRecuperar
             // 
