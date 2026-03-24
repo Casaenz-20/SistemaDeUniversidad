@@ -35,9 +35,9 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
             this.ContxMenuMatriculas = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datagMatricula = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnBuscarMaatriculas = new FontAwesome.Sharp.IconButton();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ContxMenuMatriculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagMatricula)).BeginInit();
@@ -46,12 +46,13 @@
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(285, 179);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(204, 179);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(245, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(326, 31);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Cedula del Estudiante:";
             // 
@@ -67,7 +68,7 @@
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.Location = new System.Drawing.Point(656, 161);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PlaceholderText = "";
             this.txtCedula.SelectedText = "";
@@ -90,6 +91,13 @@
             this.ContxMenuMatriculas.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.ContxMenuMatriculas.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.ContxMenuMatriculas.Size = new System.Drawing.Size(133, 28);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // datagMatricula
             // 
@@ -160,13 +168,6 @@
             this.btnBuscarMaatriculas.UseVisualStyleBackColor = true;
             this.btnBuscarMaatriculas.Click += new System.EventHandler(this.btnBuscarMaatriculas_Click);
             // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -187,7 +188,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagMatricula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
