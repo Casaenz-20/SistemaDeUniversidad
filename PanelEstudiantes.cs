@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,15 @@ namespace SistemaDeUniversidad
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            LoginUser login = new LoginUser();
-            login.Show();
-            this.Close();
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea cerrar sesión?",
+         "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                LoginUser login = new LoginUser();
+                login.Show();
+                this.Dispose();
+            }
         }
 
         private void btnVerCursos_Click(object sender, EventArgs e)
@@ -56,6 +63,47 @@ namespace SistemaDeUniversidad
             RegistroCursos cursosRegistrados = new RegistroCursos();
             ContenedorEstudiantes.Controls.Clear();
             ContenedorEstudiantes.Controls.Add(cursosRegistrados);
+        }
+
+        private void PanelEstudiantes_Load(object sender, EventArgs e)
+        {
+            Color colorPanelOscuro = Color.FromArgb(31, 40, 62); // Azul Noche Muy Oscuro
+            Color colorAcento = Color.FromArgb(0, 180, 216);    // Cian Vibrante
+            Color colorTextoOscuro = Color.White;
+            Color colorFondoClaro = Color.FromArgb(244, 246, 249);
+
+            cuiPanel1.BackColor = colorPanelOscuro;
+   
+
+            // --- Configurar Botones (FontAwesome.Sharp) ---
+            List<IconButton> misBotones = new List<IconButton> {
+        btnMatricular, btnRegistrMatricula, CambiarContra, btnVerCursos,iconButton1
+    };
+
+            foreach (var btn in misBotones)
+            {
+                // Estilo Base Moderno
+                btn.BackColor = Color.Transparent; // Usar el fondo del panel
+                btn.ForeColor = colorTextoOscuro;
+                btn.IconColor = colorTextoOscuro;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.TextAlign = ContentAlignment.MiddleLeft;
+                btn.ImageAlign = ContentAlignment.MiddleLeft;
+                btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                btn.Padding = new Padding(20, 0, 0, 0); // Espacio a la izquierda del icono
+                btn.Font = new Font("Century Gothic", 10F, FontStyle.Regular); // Fuente más moderna
+
+                // Efectos al pasar el mouse
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 62, 80); // Un gris-azul sutil
+            }
+
+            // --- Botón Cerrar Sesión (Acento Colorido) ---
+            // Este botón lo podemos hacer resaltar más
+            iconButton1.BackColor = Color.FromArgb(192, 57, 43); // Un rojo sutil
+            iconButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(231, 76, 60); // Rojo más brillante
+            iconButton1.IconChar = IconChar.SignOutAlt;
+            iconButton1.Padding = new Padding(10, 0, 0, 0);
         }
     }
 }

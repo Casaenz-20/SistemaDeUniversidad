@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Guna.UI2.WinForms;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SistemaDeUniversidad.Properties;
 using System;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +35,7 @@ namespace SistemaDeUniversidad
             }
             usuarios = LeerUsuarios(Settings.Default.ListUser);
 
+            DiseñarFormulario();
         }
 
         private List<JObject> LeerUsuarios(string listUser)
@@ -178,5 +181,55 @@ namespace SistemaDeUniversidad
                 pictureBox1.Image = Resources.ojo_cerrado;
             }
         }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                e.SuppressKeyPress = true;
+
+                
+                txtPassword.Focus();
+            }
+        }
+
+
+        private void DiseñarFormulario()
+        {
+            // --- 1. FONDO DEL FORMULARIO (GRADIENTE) ---
+            guna2GradientPanel1.FillColor = Color.FromArgb(206, 142, 169); // Rosa suave
+            guna2GradientPanel1.FillColor2 = Color.FromArgb(41, 74, 126); // Azul profundo
+            guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+
+            
+            // Usamos una región para hacerlo circular sin que de error de BorderRadius
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Region = new Region(gp);
+
+            // --- 3. TEXTBOXES (GUNA2TEXTBOX) ---
+            // Usamos FontAwesome para los iconos y así evitar errores de Resources
+            
+            txtPassword.PasswordChar = '●';
+
+            // --- 4. LINKLABEL 'Forgot Password?' ---
+            kryptonLinkLabel1.StateCommon.ShortText.Color1 = Color.FromArgb(110, 110, 130);
+            kryptonLinkLabel1.StateCommon.ShortText.Color2 = Color.FromArgb(110, 110, 130);
+            kryptonLinkLabel1.StateCommon.ShortText.Font = new Font("Segoe UI", 9F);
+            kryptonLinkLabel1.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Far;
+
+            // --- 5. BOTÓN LOGIN (cuiButton de CuoreUI) ---
+            txtIniciar.NormalBackground = Color.FromArgb(200, 255, 255, 255);
+            txtIniciar.NormalForeColor = Color.FromArgb(15, 38, 77);
+            txtIniciar.HoverBackground = Color.FromArgb(230, 255, 255, 255);
+            txtIniciar.HoverForeColor = Color.FromArgb(15, 38, 77);
+            txtIniciar.NormalOutline = Color.Transparent;
+            txtIniciar.OutlineThickness = 0;
+            txtIniciar.Rounding = new Padding(15);
+        }
+
+
+
     }
 }
