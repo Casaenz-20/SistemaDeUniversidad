@@ -25,7 +25,17 @@ namespace SistemaDeUniversidad
 
         private void RegistroCursos_Load(object sender, EventArgs e)
         {
+            if (!ArchivoExiste(Settings.Default.ListMatricula))
+            {
+                CrearArchivo(Settings.Default.ListMatricula);
+            }
             Matricula = LeerArchicho(Settings.Default.ListMatricula);   
+        }
+
+        private Func<string, bool> ArchivoExiste = (ruta) => System.IO.File.Exists(ruta);
+        private void CrearArchivo(string listMatricula)
+        {
+            File.WriteAllText(listMatricula, "[]");
         }
 
         private List<JObject> LeerArchicho(string listMatricula)

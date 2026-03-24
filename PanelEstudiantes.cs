@@ -135,5 +135,10 @@ namespace SistemaDeUniversidad
             this.Show();
             this.WindowState = FormWindowState.Normal;
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
