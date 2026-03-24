@@ -96,5 +96,52 @@ namespace SistemaDeUniversidad
                 MessageBox.Show("El archivo de datos no existe.");
             }
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (datagMatricula.SelectedRows.Count > 0)
+            {
+                // Confirmación de seguridad
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    // 2. Obtener el ID o valor único de la fila seleccionada
+                    // Supongamos que la primera columna (índice 0) tiene el ID o Nombre
+                    string idSeleccionado = datagMatricula.SelectedRows[0].Cells[0].Value.ToString();
+
+                    // 3. Eliminar de la lista y actualizar JSON
+                    EliminarDeJson(idSeleccionado);
+
+                    MessageBox.Show("Registro eliminado correctamente.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila completa de la tabla.");
+            }
+        }
+
+        private void EliminarDeJson(string idSeleccionado)
+        {
+            string rutaArchivo = Settings.Default.ListMatricula; // Ajusta a tu ruta real
+
+            if (File.Exists(rutaArchivo))
+            {
+                
+                string jsonExistente = File.ReadAllText(rutaArchivo);
+
+                // Convertir a lista de objetos (usa tu clase, ej: Curso o Usuario)
+                var lista = JsonConvert.DeserializeObject<List<JObject>>(jsonExistente);
+
+                // LINQ: Filtrar la lista para quitar el elemento que coincida con el ID
+                // Reemplaza "Id" por el nombre de la propiedad real de tu clase
+                lista.RemoveAll(x => x["CedulaEstudiante"].ToString() == txtCedula.Text);
+
+                // Serializar la nueva lista y guardar
+                string nuevoJson = JsonConvert.SerializeObject(lista, Formatting.Indented);
+                File.WriteAllText(rutaArchivo, nuevoJson);
+            }
+        }
     }
 }

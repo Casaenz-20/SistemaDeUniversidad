@@ -29,6 +29,7 @@ namespace SistemaDeUniversidad
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             this.CambiarContra = new FontAwesome.Sharp.IconButton();
             this.btnVerCursos = new FontAwesome.Sharp.IconButton();
@@ -36,6 +37,7 @@ namespace SistemaDeUniversidad
             this.btnRegistrMatricula = new FontAwesome.Sharp.IconButton();
             this.btnMatricular = new FontAwesome.Sharp.IconButton();
             this.ContenedorEstudiantes = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.cuiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +140,11 @@ namespace SistemaDeUniversidad
             this.ContenedorEstudiantes.Size = new System.Drawing.Size(1293, 1088);
             this.ContenedorEstudiantes.TabIndex = 1;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // PanelEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,5 +170,6 @@ namespace SistemaDeUniversidad
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton CambiarContra;
         private FontAwesome.Sharp.IconButton btnVerCursos;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
