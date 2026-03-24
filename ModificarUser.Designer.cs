@@ -47,19 +47,17 @@
             // mskFechaPersona
             // 
             this.mskFechaPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskFechaPersona.Location = new System.Drawing.Point(505, 8);
-            this.mskFechaPersona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskFechaPersona.Location = new System.Drawing.Point(758, 12);
             this.mskFechaPersona.Name = "mskFechaPersona";
-            this.mskFechaPersona.Size = new System.Drawing.Size(208, 35);
+            this.mskFechaPersona.Size = new System.Drawing.Size(310, 35);
             this.mskFechaPersona.TabIndex = 35;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(505, 49);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Location = new System.Drawing.Point(758, 75);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(263, 32);
+            this.txtUsuario.Size = new System.Drawing.Size(392, 32);
             this.txtUsuario.TabIndex = 34;
             // 
             // chkEstado
@@ -69,10 +67,9 @@
             this.chkEstado.CheckedState.BorderThickness = 0;
             this.chkEstado.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.chkEstado.Location = new System.Drawing.Point(44, 173);
-            this.chkEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEstado.Location = new System.Drawing.Point(66, 266);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(83, 31);
+            this.chkEstado.Size = new System.Drawing.Size(124, 48);
             this.chkEstado.TabIndex = 33;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -85,9 +82,10 @@
             this.cuiLabel5.Content = "Rol:";
             this.cuiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel5.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel5.Location = new System.Drawing.Point(16, 112);
+            this.cuiLabel5.Location = new System.Drawing.Point(24, 172);
+            this.cuiLabel5.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel5.Name = "cuiLabel5";
-            this.cuiLabel5.Size = new System.Drawing.Size(77, 27);
+            this.cuiLabel5.Size = new System.Drawing.Size(116, 42);
             this.cuiLabel5.TabIndex = 32;
             this.cuiLabel5.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -104,10 +102,9 @@
             this.cboxRol.Items.AddRange(new object[] {
             "Administrador",
             "Estudiante"});
-            this.cboxRol.Location = new System.Drawing.Point(116, 112);
-            this.cboxRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxRol.Location = new System.Drawing.Point(174, 172);
             this.cboxRol.Name = "cboxRol";
-            this.cboxRol.Size = new System.Drawing.Size(167, 36);
+            this.cboxRol.Size = new System.Drawing.Size(248, 36);
             this.cboxRol.TabIndex = 31;
             // 
             // cuiLabel4
@@ -115,18 +112,18 @@
             this.cuiLabel4.Content = "Correo:";
             this.cuiLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel4.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel4.Location = new System.Drawing.Point(9, 60);
+            this.cuiLabel4.Location = new System.Drawing.Point(14, 92);
+            this.cuiLabel4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel4.Name = "cuiLabel4";
-            this.cuiLabel4.Size = new System.Drawing.Size(84, 39);
+            this.cuiLabel4.Size = new System.Drawing.Size(126, 60);
             this.cuiLabel4.TabIndex = 30;
             this.cuiLabel4.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(116, 60);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Location = new System.Drawing.Point(174, 92);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(208, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(312, 30);
             this.txtCorreo.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.TabIndex = 29;
             // 
@@ -135,9 +132,10 @@
             this.cuiLabel3.Content = "Fecha:";
             this.cuiLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel3.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel3.Location = new System.Drawing.Point(361, 9);
+            this.cuiLabel3.Location = new System.Drawing.Point(542, 14);
+            this.cuiLabel3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel3.Name = "cuiLabel3";
-            this.cuiLabel3.Size = new System.Drawing.Size(105, 34);
+            this.cuiLabel3.Size = new System.Drawing.Size(158, 52);
             this.cuiLabel3.TabIndex = 28;
             this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -146,19 +144,19 @@
             this.cuiLabel1.Content = "Cedula";
             this.cuiLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel1.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel1.Location = new System.Drawing.Point(-11, 16);
+            this.cuiLabel1.Location = new System.Drawing.Point(-16, 25);
+            this.cuiLabel1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel1.Name = "cuiLabel1";
-            this.cuiLabel1.Size = new System.Drawing.Size(103, 37);
+            this.cuiLabel1.Size = new System.Drawing.Size(154, 57);
             this.cuiLabel1.TabIndex = 27;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(116, 16);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedula.Location = new System.Drawing.Point(174, 25);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.ReadOnly = true;
-            this.txtCedula.Size = new System.Drawing.Size(111, 31);
+            this.txtCedula.Size = new System.Drawing.Size(166, 31);
             this.txtCedula.TabIndex = 26;
             // 
             // cuiLabel2
@@ -166,9 +164,10 @@
             this.cuiLabel2.Content = "Usuario:";
             this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel2.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel2.Location = new System.Drawing.Point(377, 49);
+            this.cuiLabel2.Location = new System.Drawing.Point(566, 75);
+            this.cuiLabel2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(109, 34);
+            this.cuiLabel2.Size = new System.Drawing.Size(164, 52);
             this.cuiLabel2.TabIndex = 36;
             this.cuiLabel2.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -191,21 +190,19 @@
             this.btnGuardarCambios.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGuardarCambios.Image = null;
             this.btnGuardarCambios.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnGuardarCambios.Location = new System.Drawing.Point(327, 173);
-            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(490, 266);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
             this.btnGuardarCambios.NormalBackground = System.Drawing.Color.DodgerBlue;
             this.btnGuardarCambios.NormalForeColor = System.Drawing.Color.Black;
             this.btnGuardarCambios.NormalImageTint = System.Drawing.Color.Black;
             this.btnGuardarCambios.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGuardarCambios.OutlineThickness = 1F;
-            this.btnGuardarCambios.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnGuardarCambios.PressedBackground = System.Drawing.Color.WhiteSmoke;
             this.btnGuardarCambios.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnGuardarCambios.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnGuardarCambios.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGuardarCambios.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnGuardarCambios.Size = new System.Drawing.Size(226, 46);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(339, 71);
             this.btnGuardarCambios.TabIndex = 37;
             this.btnGuardarCambios.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnGuardarCambios.TextPadding = -1;
@@ -217,27 +214,27 @@
             this.cuiLabel6.Content = "Contraseña:";
             this.cuiLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel6.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel6.Location = new System.Drawing.Point(377, 112);
+            this.cuiLabel6.Location = new System.Drawing.Point(566, 172);
+            this.cuiLabel6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cuiLabel6.Name = "cuiLabel6";
-            this.cuiLabel6.Size = new System.Drawing.Size(147, 34);
+            this.cuiLabel6.Size = new System.Drawing.Size(220, 52);
             this.cuiLabel6.TabIndex = 38;
             this.cuiLabel6.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // txtContrasena
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(543, 107);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContrasena.Location = new System.Drawing.Point(814, 165);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(263, 32);
+            this.txtContrasena.Size = new System.Drawing.Size(392, 32);
             this.txtContrasena.TabIndex = 39;
             // 
             // ModificarUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1098, 226);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1647, 348);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.cuiLabel6);
             this.Controls.Add(this.btnGuardarCambios);
@@ -252,7 +249,6 @@
             this.Controls.Add(this.cuiLabel3);
             this.Controls.Add(this.cuiLabel1);
             this.Controls.Add(this.txtCedula);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ModificarUser";
             this.Text = "ModificarUser";
             this.Load += new System.EventHandler(this.ModificarUser_Load);
