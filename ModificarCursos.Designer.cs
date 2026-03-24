@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarCursos));
             this.txtCodigoMF = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,22 +49,22 @@
             this.txtCodigoMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigoMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigoMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoMF.Location = new System.Drawing.Point(267, 110);
-            this.txtCodigoMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtCodigoMF.Location = new System.Drawing.Point(300, 138);
+            this.txtCodigoMF.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtCodigoMF.Name = "txtCodigoMF";
             this.txtCodigoMF.PlaceholderText = "";
             this.txtCodigoMF.SelectedText = "";
-            this.txtCodigoMF.Size = new System.Drawing.Size(381, 37);
+            this.txtCodigoMF.Size = new System.Drawing.Size(429, 46);
             this.txtCodigoMF.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(140, 110);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(158, 138);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(79, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 31);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Codigo:";
             // 
@@ -71,10 +72,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(708, 110);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(796, 138);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(85, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(104, 31);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Nombre:";
             // 
@@ -89,22 +90,22 @@
             this.txtNombreMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombreMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreMF.Location = new System.Drawing.Point(856, 110);
-            this.txtNombreMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtNombreMF.Location = new System.Drawing.Point(963, 138);
+            this.txtNombreMF.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtNombreMF.Name = "txtNombreMF";
             this.txtNombreMF.PlaceholderText = "";
             this.txtNombreMF.SelectedText = "";
-            this.txtNombreMF.Size = new System.Drawing.Size(381, 37);
+            this.txtNombreMF.Size = new System.Drawing.Size(429, 46);
             this.txtNombreMF.TabIndex = 3;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(512, 223);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(576, 279);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(71, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(86, 31);
             this.guna2HtmlLabel3.TabIndex = 4;
             this.guna2HtmlLabel3.Text = "Precio:";
             // 
@@ -119,12 +120,12 @@
             this.txtPrecioMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecioMF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecioMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecioMF.Location = new System.Drawing.Point(649, 213);
-            this.txtPrecioMF.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPrecioMF.Location = new System.Drawing.Point(730, 266);
+            this.txtPrecioMF.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPrecioMF.Name = "txtPrecioMF";
             this.txtPrecioMF.PlaceholderText = "";
             this.txtPrecioMF.SelectedText = "";
-            this.txtPrecioMF.Size = new System.Drawing.Size(381, 37);
+            this.txtPrecioMF.Size = new System.Drawing.Size(429, 46);
             this.txtPrecioMF.TabIndex = 5;
             // 
             // btnModificar
@@ -146,21 +147,20 @@
             this.btnModificar.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.Image = null;
             this.btnModificar.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnModificar.Location = new System.Drawing.Point(140, 292);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Location = new System.Drawing.Point(158, 365);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.NormalBackground = System.Drawing.Color.White;
             this.btnModificar.NormalForeColor = System.Drawing.Color.Black;
             this.btnModificar.NormalImageTint = System.Drawing.Color.Black;
             this.btnModificar.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.OutlineThickness = 1F;
-            this.btnModificar.Padding = new System.Windows.Forms.Padding(16, 15, 16, 15);
             this.btnModificar.PressedBackground = System.Drawing.Color.WhiteSmoke;
             this.btnModificar.PressedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnModificar.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnModificar.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnModificar.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnModificar.Size = new System.Drawing.Size(1097, 55);
+            this.btnModificar.Size = new System.Drawing.Size(1234, 69);
             this.btnModificar.TabIndex = 8;
             this.btnModificar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnModificar.TextPadding = -1;
@@ -169,9 +169,9 @@
             // 
             // ModificarCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1688, 518);
+            this.ClientSize = new System.Drawing.Size(1899, 648);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtPrecioMF);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -179,7 +179,8 @@
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.txtCodigoMF);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ModificarCursos";
             this.Text = "ModificarCursos";
             this.Load += new System.EventHandler(this.ModificarCursos_Load);

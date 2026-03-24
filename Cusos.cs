@@ -46,11 +46,19 @@ namespace SistemaDeUniversidad
             return JsonConvert.DeserializeObject<List<JObject>>(contenido_text_cursos) ?? new List<JObject>();
         }
 
+
+        /// <summary>
+        /// Crea el Archivo solo si se detecta que no existe
+        /// </summary>
+        /// <param name="listCursos"></param>
         private void CrearArchivo(string listCursos)
         {
             File.WriteAllText(listCursos, "[]");
         }
 
+        /// <summary>
+        /// Revisa si el archico JSON existe
+        /// </summary>
         private Func<string, bool> ArchivoCursosExiste = (ruta) => File.Exists(ruta);
 
         private void btnGuardarCurso_Click(object sender, EventArgs e)
@@ -119,6 +127,12 @@ namespace SistemaDeUniversidad
             }
         }
 
+
+        /// <summary>
+        /// Obtiene la imformacion del la columna selecionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void datagCursos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -142,6 +156,12 @@ namespace SistemaDeUniversidad
 
         }
 
+
+        /// <summary>
+        /// Elimina el curso que e seleccionado en el datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (datagCursos.SelectedRows.Count == 0)
@@ -188,6 +208,11 @@ namespace SistemaDeUniversidad
             }
         }
 
+        /// <summary>
+        /// Muestra el Forms para modificar el curso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ModificarCursos modificarCursos = new ModificarCursos(new JObject()
@@ -201,6 +226,12 @@ namespace SistemaDeUniversidad
 
         }
 
+
+        /// <summary>
+        ///  Imprime los cursos en el datagrid
+        /// </summary>
+        /// <param name="dataCursos"></param>
+        /// <param name="cursos"></param>
         internal static void ImprimirListaCursos(DataGridView dataCursos, List<JObject> cursos)
         {
             dataCursos.Rows.Clear();

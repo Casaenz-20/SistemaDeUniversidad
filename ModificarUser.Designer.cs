@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarUser));
             this.mskFechaPersona = new System.Windows.Forms.MaskedTextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.chkEstado = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -249,6 +250,7 @@
             this.Controls.Add(this.cuiLabel3);
             this.Controls.Add(this.cuiLabel1);
             this.Controls.Add(this.txtCedula);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModificarUser";
             this.Text = "ModificarUser";
             this.Load += new System.EventHandler(this.ModificarUser_Load);

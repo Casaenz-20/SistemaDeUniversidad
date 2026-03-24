@@ -48,7 +48,7 @@ namespace SistemaDeUniversidad
             CambiarContraseña con = new CambiarContraseña();
             ContenedorEstudiantes.Controls.Clear();
             ContenedorEstudiantes.Controls.Add(con);
-            
+
         }
 
         private void btnMatricular_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace SistemaDeUniversidad
             Color colorFondoClaro = Color.FromArgb(244, 246, 249);
 
             cuiPanel1.BackColor = colorPanelOscuro;
-   
+
 
             // --- Configurar Botones (FontAwesome.Sharp) ---
             List<IconButton> misBotones = new List<IconButton> {
@@ -104,6 +104,36 @@ namespace SistemaDeUniversidad
             iconButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(231, 76, 60); // Rojo más brillante
             iconButton1.IconChar = IconChar.SignOutAlt;
             iconButton1.Padding = new Padding(10, 0, 0, 0);
+        }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void PanelEstudiantes_Resize(object sender, EventArgs e)
+        {
+            // Verificamos si el estado de la ventana es Minimizado
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                // 1. Ocultamos el formulario de la barra de tareas
+                this.Hide();
+
+                // 2. Configuramos y mostramos la notificación
+                notifyIcon1.Visible = true; // Asegurarse de que el icono esté activo
+                notifyIcon1.BalloonTipTitle = "Aplicación en segundo plano";
+                notifyIcon1.BalloonTipText = "La aplicación se sigue ejecutando aquí.";
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+
+                // Muestra el globo por 3 segundos (3000 ms)
+                notifyIcon1.ShowBalloonTip(3000);
+            }
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }

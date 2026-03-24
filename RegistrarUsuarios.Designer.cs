@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarUsuarios));
             this.txtNewUser = new CuoreUI.Controls.cuiTextBox();
             this.txtPasswordNew = new CuoreUI.Controls.cuiTextBox();
             this.StudentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -297,6 +298,7 @@
             this.Controls.Add(this.txtPasswordNew);
             this.Controls.Add(this.txtNewUser);
             this.Controls.Add(this.cuiPanelGradient1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrarUsuarios";
             this.Text = "RegistrarUsuarios";
             this.Load += new System.EventHandler(this.RegistrarUsuarios_Load);

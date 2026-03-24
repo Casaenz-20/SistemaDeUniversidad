@@ -30,6 +30,7 @@ namespace SistemaDeUniversidad
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelEstudiantes));
             this.cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             this.CambiarContra = new FontAwesome.Sharp.IconButton();
             this.btnVerCursos = new FontAwesome.Sharp.IconButton();
@@ -67,10 +68,10 @@ namespace SistemaDeUniversidad
             this.CambiarContra.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CambiarContra.IconColor = System.Drawing.Color.White;
             this.CambiarContra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CambiarContra.Location = new System.Drawing.Point(52, 286);
+            this.CambiarContra.Location = new System.Drawing.Point(3, 286);
             this.CambiarContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CambiarContra.Name = "CambiarContra";
-            this.CambiarContra.Size = new System.Drawing.Size(278, 76);
+            this.CambiarContra.Size = new System.Drawing.Size(456, 76);
             this.CambiarContra.TabIndex = 4;
             this.CambiarContra.Text = "Cambiar Contraseña";
             this.CambiarContra.UseVisualStyleBackColor = true;
@@ -81,10 +82,10 @@ namespace SistemaDeUniversidad
             this.btnVerCursos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnVerCursos.IconColor = System.Drawing.Color.White;
             this.btnVerCursos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerCursos.Location = new System.Drawing.Point(52, 390);
+            this.btnVerCursos.Location = new System.Drawing.Point(3, 390);
             this.btnVerCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVerCursos.Name = "btnVerCursos";
-            this.btnVerCursos.Size = new System.Drawing.Size(278, 76);
+            this.btnVerCursos.Size = new System.Drawing.Size(456, 76);
             this.btnVerCursos.TabIndex = 3;
             this.btnVerCursos.Text = "Ver Cursos Disponibles";
             this.btnVerCursos.UseVisualStyleBackColor = true;
@@ -111,10 +112,10 @@ namespace SistemaDeUniversidad
             this.btnRegistrMatricula.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnRegistrMatricula.IconColor = System.Drawing.Color.White;
             this.btnRegistrMatricula.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrMatricula.Location = new System.Drawing.Point(52, 181);
+            this.btnRegistrMatricula.Location = new System.Drawing.Point(3, 181);
             this.btnRegistrMatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrMatricula.Name = "btnRegistrMatricula";
-            this.btnRegistrMatricula.Size = new System.Drawing.Size(278, 76);
+            this.btnRegistrMatricula.Size = new System.Drawing.Size(456, 76);
             this.btnRegistrMatricula.TabIndex = 1;
             this.btnRegistrMatricula.Text = "Registro de Matricula";
             this.btnRegistrMatricula.UseVisualStyleBackColor = true;
@@ -125,10 +126,10 @@ namespace SistemaDeUniversidad
             this.btnMatricular.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnMatricular.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnMatricular.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMatricular.Location = new System.Drawing.Point(52, 56);
+            this.btnMatricular.Location = new System.Drawing.Point(3, 56);
             this.btnMatricular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMatricular.Name = "btnMatricular";
-            this.btnMatricular.Size = new System.Drawing.Size(278, 76);
+            this.btnMatricular.Size = new System.Drawing.Size(456, 76);
             this.btnMatricular.TabIndex = 0;
             this.btnMatricular.Text = "Matrcular Cursos";
             this.btnMatricular.UseVisualStyleBackColor = true;
@@ -147,8 +148,11 @@ namespace SistemaDeUniversidad
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // PanelEstudiantes
             // 
@@ -157,10 +161,12 @@ namespace SistemaDeUniversidad
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.ContenedorEstudiantes);
             this.Controls.Add(this.cuiPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PanelEstudiantes";
             this.Text = "PanelEstudiantes";
             this.Load += new System.EventHandler(this.PanelEstudiantes_Load);
+            this.Resize += new System.EventHandler(this.PanelEstudiantes_Resize);
             this.cuiPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

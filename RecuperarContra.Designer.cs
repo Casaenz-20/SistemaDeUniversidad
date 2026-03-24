@@ -38,38 +38,38 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(237, 10);
+            this.kryptonLabel1.Location = new System.Drawing.Point(267, 12);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(269, 35);
+            this.kryptonLabel1.Size = new System.Drawing.Size(303, 44);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Recuperar Contraseña";
             // 
             // kryptonRichTextBox1
             // 
             this.kryptonRichTextBox1.InputControlStyle = Krypton.Toolkit.InputControlStyle.PanelAlternate;
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(2, 48);
+            this.kryptonRichTextBox1.Location = new System.Drawing.Point(2, 60);
             this.kryptonRichTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
             this.kryptonRichTextBox1.ReadOnly = true;
-            this.kryptonRichTextBox1.Size = new System.Drawing.Size(836, 63);
+            this.kryptonRichTextBox1.Size = new System.Drawing.Size(940, 79);
             this.kryptonRichTextBox1.TabIndex = 1;
             this.kryptonRichTextBox1.Text = resources.GetString("kryptonRichTextBox1.Text");
             // 
             // txtCorreoRecuperar
             // 
-            this.txtCorreoRecuperar.Location = new System.Drawing.Point(158, 152);
+            this.txtCorreoRecuperar.Location = new System.Drawing.Point(178, 190);
             this.txtCorreoRecuperar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoRecuperar.Name = "txtCorreoRecuperar";
-            this.txtCorreoRecuperar.Size = new System.Drawing.Size(452, 27);
+            this.txtCorreoRecuperar.Size = new System.Drawing.Size(508, 31);
             this.txtCorreoRecuperar.TabIndex = 2;
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.Location = new System.Drawing.Point(213, 182);
+            this.btnRecuperar.Location = new System.Drawing.Point(240, 228);
             this.btnRecuperar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(342, 25);
+            this.btnRecuperar.Size = new System.Drawing.Size(385, 31);
             this.btnRecuperar.TabIndex = 3;
             this.btnRecuperar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnRecuperar.Values.Text = "Recuperar";
@@ -77,13 +77,14 @@
             // 
             // RecuperarContra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 360);
+            this.ClientSize = new System.Drawing.Size(945, 450);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.txtCorreoRecuperar);
             this.Controls.Add(this.kryptonRichTextBox1);
             this.Controls.Add(this.kryptonLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RecuperarContra";
             this.Text = "RecuperarContra";

@@ -22,7 +22,11 @@ namespace SistemaDeUniversidad
     public partial class CambiarContraseña : UserControl
 
     {
+        /// <summary>
+        /// Variable para guardar el codigo generado
+        /// </summary>
         string CodigoGenerado;
+
         public static List<JObject> usuarios = new List<JObject>();
         public CambiarContraseña()
         {
@@ -91,7 +95,7 @@ namespace SistemaDeUniversidad
                     correo.From = new MailAddress(miCorreo, "Sistema Universitario"); // Nombre que verá el usuario
                     correo.To.Add(Correouser);
                     correo.Subject = "Codigo de Verificacion";
-                    correo.Body = $"Hola,\n\nHas solicitado un codigo para cambiar tu contraseña.\nTu codigó de verificacion es: {CodigoGenerado}\n\nSi no fue no lo solicito por favao conumicarse con la institucion.";
+                    correo.Body = $"Hola,\n\nHas solicitado un codigo para cambiar tu contraseña.\nTu codigó de verificacion es: {CodigoGenerado}\n\nSi no fue usted quien lo solicito por favor conumicarse con la institucion.";
                     correo.IsBodyHtml = false;
 
                     SmtpClient clienteSmtp = new SmtpClient("smtp.gmail.com")
@@ -123,7 +127,11 @@ namespace SistemaDeUniversidad
             }
         }
 
-
+        /// <summary>
+        /// Verifica si el correo ingresado existe 
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private bool ExisteCorreo(string text)
         {
             bool existeUser = usuarios.Any(u => u["Correo"].ToString() == txtCorreoEstudiante.Text);
@@ -131,7 +139,11 @@ namespace SistemaDeUniversidad
         }
 
         
-
+        /// <summary>
+        /// Genera un Codigo de 6 digitos que sera enviado por correo
+        /// </summary>
+        /// <param name="longitud"></param>
+        /// <returns></returns>
         public static string GenerarCodigo(int longitud = 6)
         {
             Random random = new Random();
@@ -170,6 +182,11 @@ namespace SistemaDeUniversidad
             }
         }
 
+
+        /// <summary>
+        /// Cambia la comtraseña nueva en el Archivo JSON
+        /// </summary>
+        /// <param name="listUser"></param>
         private void GuardarNuevaContra(string listUser)
         {
             string jsonActual = File.ReadAllText(Settings.Default.ListCursos);
@@ -189,6 +206,12 @@ namespace SistemaDeUniversidad
             }
         }
 
+
+        /// <summary>
+        /// Compara el codigo generado con el codigo que ingreasa el usuario
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private bool CodigoCoinside(string text)
         {
             return txtCodigodeVerificacion.Text == CodigoGenerado;

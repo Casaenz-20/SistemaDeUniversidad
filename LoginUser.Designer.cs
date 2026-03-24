@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUser));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
@@ -64,7 +65,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(1, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(632, 425);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(711, 531);
             this.guna2GradientPanel1.TabIndex = 10;
             this.guna2GradientPanel1.UseTransparentBackground = true;
             // 
@@ -80,12 +81,12 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
-            this.kryptonPanel1.Location = new System.Drawing.Point(36, 24);
+            this.kryptonPanel1.Location = new System.Drawing.Point(40, 30);
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabCustom2;
-            this.kryptonPanel1.Size = new System.Drawing.Size(552, 356);
+            this.kryptonPanel1.Size = new System.Drawing.Size(621, 445);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.kryptonPanel1.TabIndex = 5;
@@ -94,9 +95,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::SistemaDeUniversidad.Properties.Resources.ojo_cerrado;
-            this.pictureBox1.Location = new System.Drawing.Point(424, 154);
+            this.pictureBox1.Location = new System.Drawing.Point(477, 192);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 41);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -122,7 +124,7 @@
             this.btnRegistrarUser.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRegistrarUser.Image = null;
             this.btnRegistrarUser.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnRegistrarUser.Location = new System.Drawing.Point(11, 294);
+            this.btnRegistrarUser.Location = new System.Drawing.Point(12, 368);
             this.btnRegistrarUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarUser.Name = "btnRegistrarUser";
             this.btnRegistrarUser.NormalBackground = System.Drawing.Color.Transparent;
@@ -135,7 +137,7 @@
             this.btnRegistrarUser.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnRegistrarUser.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRegistrarUser.Rounding = new System.Windows.Forms.Padding(8);
-            this.btnRegistrarUser.Size = new System.Drawing.Size(175, 36);
+            this.btnRegistrarUser.Size = new System.Drawing.Size(197, 45);
             this.btnRegistrarUser.TabIndex = 10;
             this.btnRegistrarUser.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnRegistrarUser.TextPadding = -1;
@@ -158,12 +160,12 @@
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.IconLeft = global::SistemaDeUniversidad.Properties.Resources.usuario;
-            this.txtUser.Location = new System.Drawing.Point(160, 79);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUser.Location = new System.Drawing.Point(180, 99);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtUser.Name = "txtUser";
             this.txtUser.PlaceholderText = "";
             this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(255, 36);
+            this.txtUser.Size = new System.Drawing.Size(287, 45);
             this.txtUser.TabIndex = 9;
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
@@ -188,7 +190,7 @@
             this.txtIniciar.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.Image = null;
             this.txtIniciar.ImageExpand = new System.Drawing.Point(0, 0);
-            this.txtIniciar.Location = new System.Drawing.Point(295, 196);
+            this.txtIniciar.Location = new System.Drawing.Point(332, 245);
             this.txtIniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIniciar.Name = "txtIniciar";
             this.txtIniciar.NormalBackground = System.Drawing.Color.Transparent;
@@ -201,7 +203,7 @@
             this.txtIniciar.PressedImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtIniciar.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIniciar.Rounding = new System.Windows.Forms.Padding(8);
-            this.txtIniciar.Size = new System.Drawing.Size(155, 36);
+            this.txtIniciar.Size = new System.Drawing.Size(174, 45);
             this.txtIniciar.TabIndex = 6;
             this.txtIniciar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.txtIniciar.TextPadding = -1;
@@ -224,22 +226,22 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::SistemaDeUniversidad.Properties.Resources.simbolo_de_candado_de_bloqueo_para_interfaz_de_seguridad;
-            this.txtPassword.Location = new System.Drawing.Point(160, 152);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassword.Location = new System.Drawing.Point(180, 190);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(255, 36);
+            this.txtPassword.Size = new System.Drawing.Size(287, 45);
             this.txtPassword.TabIndex = 8;
             // 
             // kryptonLinkLabel1
             // 
             this.kryptonLinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLinkLabel1.Location = new System.Drawing.Point(36, 196);
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(40, 245);
             this.kryptonLinkLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
-            this.kryptonLinkLabel1.Size = new System.Drawing.Size(253, 36);
+            this.kryptonLinkLabel1.Size = new System.Drawing.Size(285, 45);
             this.kryptonLinkLabel1.TabIndex = 4;
             this.kryptonLinkLabel1.Values.Text = "Olvide mi  contraseña";
             this.kryptonLinkLabel1.LinkClicked += new System.EventHandler(this.kryptonLinkLabel1_LinkClicked);
@@ -248,11 +250,11 @@
             // 
             this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel3.LabelStyle = Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(121, 0);
+            this.kryptonLabel3.Location = new System.Drawing.Point(136, 0);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalOffice2003;
-            this.kryptonLabel3.Size = new System.Drawing.Size(344, 54);
+            this.kryptonLabel3.Size = new System.Drawing.Size(387, 68);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 7;
             this.kryptonLabel3.Values.Text = "Inicio de Seccion";
@@ -260,10 +262,10 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonLabel1.Location = new System.Drawing.Point(3, 150);
+            this.kryptonLabel1.Location = new System.Drawing.Point(3, 188);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(173, 37);
+            this.kryptonLabel1.Size = new System.Drawing.Size(195, 46);
             this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 0;
@@ -273,23 +275,24 @@
             // 
             this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kryptonLabel2.AutoSize = false;
-            this.kryptonLabel2.Location = new System.Drawing.Point(36, 79);
+            this.kryptonLabel2.Location = new System.Drawing.Point(40, 99);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(88, 36);
+            this.kryptonLabel2.Size = new System.Drawing.Size(99, 45);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 6;
             this.kryptonLabel2.Values.Text = "Usuario";
             // 
             // LoginUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 409);
+            this.ClientSize = new System.Drawing.Size(703, 511);
             this.Controls.Add(this.guna2GradientPanel1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(407, 254);
+            this.MinimumSize = new System.Drawing.Size(455, 304);
             this.Name = "LoginUser";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginUser_Load);

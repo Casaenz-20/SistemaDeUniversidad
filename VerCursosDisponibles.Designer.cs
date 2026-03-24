@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerCursosDisponibles));
             this.datagVerCursos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +45,12 @@
             this.Precio});
             this.datagVerCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagVerCursos.Location = new System.Drawing.Point(0, 0);
+            this.datagVerCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datagVerCursos.Name = "datagVerCursos";
             this.datagVerCursos.RowHeadersVisible = false;
             this.datagVerCursos.RowHeadersWidth = 51;
             this.datagVerCursos.RowTemplate.Height = 24;
-            this.datagVerCursos.Size = new System.Drawing.Size(800, 477);
+            this.datagVerCursos.Size = new System.Drawing.Size(900, 596);
             this.datagVerCursos.TabIndex = 0;
             // 
             // Codigo
@@ -74,10 +76,12 @@
             // 
             // VerCursosDisponibles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 477);
+            this.ClientSize = new System.Drawing.Size(900, 596);
             this.Controls.Add(this.datagVerCursos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "VerCursosDisponibles";
             this.Text = "VerCursosDisponibles";
             this.Load += new System.EventHandler(this.VerCursosDisponibles_Load);

@@ -17,7 +17,7 @@ namespace SistemaDeUniversidad
             InitializeComponent();
         }
 
-        
+
 
         private void RegisCursos_Click_1(object sender, EventArgs e)
         {
@@ -45,6 +45,13 @@ namespace SistemaDeUniversidad
             administrarUsuarios.Show();
         }
 
+
+
+        /// <summary>
+        /// Carga el diseño del Forms
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelDeAdministrador_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
@@ -57,10 +64,10 @@ namespace SistemaDeUniversidad
             GunaPanel.BorderRadius = 15; // Requiere Guna2Panel o CuoreUI Panel
             GunaPanel.ShadowDecoration.Enabled = true; // Sombra sutil
             GunaPanel.ShadowDecoration.Color = Color.Black;
-           
+
 
             // --- Diseño de Botones de FontAwesome.Sharp ---
-            ConfigurarBotonesMenuSideBar(new List<FontAwesome.Sharp.IconButton> { btnUsuariosPanel, RegisCursos,btnVolverLogin });
+            ConfigurarBotonesMenuSideBar(new List<FontAwesome.Sharp.IconButton> { btnUsuariosPanel, RegisCursos, btnVolverLogin });
         }
 
 
@@ -102,6 +109,31 @@ namespace SistemaDeUniversidad
                 login.Show();
                 this.Dispose();
             }
+        }
+
+        private void PanelDeAdministrador_Resize(object sender, EventArgs e)
+        {
+            // Verificamos si el estado de la ventana es Minimizado
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                // 1. Ocultamos el formulario de la barra de tareas
+                this.Hide();
+
+                // 2. Configuramos y mostramos la notificación
+                notifyIcon1.Visible = true; // Asegurarse de que el icono esté activo
+                notifyIcon1.BalloonTipTitle = "Aplicación en segundo plano";
+                notifyIcon1.BalloonTipText = "La aplicación se sigue ejecutando aquí.";
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+
+                // Muestra el globo por 3 segundos (3000 ms)
+                notifyIcon1.ShowBalloonTip(3000);
+            }
+        }
+
+        private void notifyIcon1_BalloonTipClicked_1(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }
