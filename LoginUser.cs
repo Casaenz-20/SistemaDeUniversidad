@@ -38,6 +38,12 @@ namespace SistemaDeUniversidad
             DiseñarFormulario();
         }
 
+        /// <summary>
+        /// Lee el archivo JSON de los usurios
+        /// </summary>
+        /// <param name="listUser"></param>
+        /// <returns></returns>
+
         private List<JObject> LeerUsuarios(string listUser)
         {
             string contenido_usuario_tex = File.ReadAllText(listUser);
@@ -50,6 +56,9 @@ namespace SistemaDeUniversidad
 
         }
 
+        /// <summary>
+        /// Revisa si el arachivo JSon existe en los archovos del proyecto
+        /// </summary>
         Func<string, bool> ArchivoUsuarioExiste = (ruta) => File.Exists(ruta);
 
 
@@ -122,6 +131,11 @@ namespace SistemaDeUniversidad
 
         }
 
+        /// <summary>
+        /// Funcion que revisa que rol tiene el usurio para mostrar los paneles dependiendo del rol que tenga el usuario
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private bool RolUser(string text)
         {
             bool EsAdmin = usuarios.Any(u => u["Usuario"].ToString() == text && u["TipoUsuario"].ToString() == "Administrador");
